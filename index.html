@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RompTele</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --card-background: rgba(255, 255, 255, 0.1);
+            --card-hover: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            background-color: var(--background-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        header img {
+            max-height: 240px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .service-card h2 {
+            color: var(--text-color);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .service-card p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .service-link:hover {
+            background-color: #2980b9;
+        }
+
+        .admin-link {
+            margin-top: 2rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .admin-link:hover {
+            opacity: 1;
+        }
+
+        .card-description {
+            color: #ccc;
+            font-style: italic;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/assets/img/logos/icon-transparent-romptele.png" alt="RompTele Logo">
+    </header>
+
+    <div class="container">
+        <div class="services-grid">
+            <div>
+                <div class="service-card">
+                    <a href="https://jellyfin.romptele.com" class="service-link">Watch</a>
+                </div>
+                <p class="card-description">Watch movies or TV shows</p>
+            </div>
+
+            <div>
+                <div class="service-card">
+                    <a href="https://jellyseerr.romptele.com" class="service-link">Request</a>
+                </div>
+                <p class="card-description">Request a movie or TV show</p>
+            </div>
+        </div>
+        <a href="https://admin.romptele.com" class="admin-link">Admin Dashboard</a>
+    </div>
+</body>
+</html> 

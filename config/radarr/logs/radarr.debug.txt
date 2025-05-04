@@ -1,0 +1,1006 @@
+2025-04-16 13:41:47.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.1|Debug|QualityParser|Trying to parse quality for 'Coraline.3D.2009.1080p.BluRay.ISO'
+2025-04-16 13:41:47.1|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.1|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.1|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.1|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.1|Debug|Parser|Parsing string 'Interstellar.2014.2160p.BluRay.HEVC.DTS-HD.MA.5.1-TASTED'
+2025-04-16 13:41:47.1|Debug|Parser|Movie Parsed. Interstellar - 2014 
+2025-04-16 13:41:47.1|Debug|Parser|Release Group parsed: TASTED
+2025-04-16 13:41:47.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.1|Debug|QualityParser|Trying to parse quality for 'Interstellar.2014.2160p.BluRay.HEVC.DTS-HD.MA.5.1-TASTED'
+2025-04-16 13:41:47.1|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.1|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.1|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.1|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.1|Debug|Parser|Parsing string 'Robin Hood (1973) BDrip 1080p ENG-ITA Multisub x264'
+2025-04-16 13:41:47.1|Debug|Parser|Movie Parsed. Robin Hood - 1973 
+2025-04-16 13:41:47.1|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.1|Debug|Parser|Languages parsed: English, Italian
+2025-04-16 13:41:47.1|Debug|QualityParser|Trying to parse quality for 'Robin Hood (1973) BDrip 1080p ENG-ITA Multisub x264'
+2025-04-16 13:41:47.1|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.1|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.1|Debug|AggregateLanguages|Selected languages: English, Italian
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'One Hundred and One Dalmatians (1961) BDrip 1080p ENG-ITA x264 -'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. One Hundred and One Dalmatians - 1961 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: English, Italian
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'One Hundred and One Dalmatians (1961) BDrip 1080p ENG-ITA x264 -'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English, Italian
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'The.Little.Mermaid.1989.UHD.BluRay.2160p.x265.HDR.Atmos.7.1-DTOn'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. The Little Mermaid - 1989 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: DTOn
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'The.Little.Mermaid.1989.UHD.BluRay.2160p.x265.HDR.Atmos.7.1-DTOn'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: Bluray-2160p v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'Arrival 2016 2160p 4K UHD Bluray HEVC Multi DTSHD 7.1 -DDR'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. Arrival - 2016 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: DDR
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'Arrival 2016 2160p 4K UHD Bluray HEVC Multi DTSHD 7.1 -DDR'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'Sing.2016.2160p.UHD.BluRay.x265.10bit.HDR.TrueHD.7.1.Atmos-TERMi'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. Sing - 2016 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: TERMi
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'Sing.2016.2160p.UHD.BluRay.x265.10bit.HDR.TrueHD.7.1.Atmos-TERMi'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: Bluray-2160p v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'Pocahontas (1995) 1080p BrRip x264 -YIFY'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. Pocahontas - 1995 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: YIFY
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'Pocahontas (1995) 1080p BrRip x264 -YIFY'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'Soul.2020.2160p.WEB-DL.DDP5.1.Atmos.HDR.x265-CMRG'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. Soul - 2020 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: CMRG
+2025-04-16 13:41:47.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.2|Debug|QualityParser|Trying to parse quality for 'Soul.2020.2160p.WEB-DL.DDP5.1.Atmos.HDR.x265-CMRG'
+2025-04-16 13:41:47.2|Debug|Parser|Quality parsed: WEBDL-2160p v1
+2025-04-16 13:41:47.2|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.2|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.2|Debug|Parser|Parsing string 'Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG'
+2025-04-16 13:41:47.2|Debug|Parser|Movie Parsed. Kung Fu Panda 2 - 2011 
+2025-04-16 13:41:47.2|Debug|Parser|Release Group parsed: RARBG
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'the-land-before-time-xii-the-great-day-of-the-flyers-2006-uk-dvd_202212'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. the-land-before-time-xii-the-great-day-of-the-flyers - 2006 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: dvd
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'the-land-before-time-xii-the-great-day-of-the-flyers-2006-uk-dvd_202212'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: DVD v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'Toy Story 2 1999.MULTi.UHD.BluRay.2160p.HEVC.HDR.Atmos.7.1-DDR'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. Toy Story 2 - 1999 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: DDR
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'Toy Story 2 1999.MULTi.UHD.BluRay.2160p.HEVC.HDR.Atmos.7.1-DDR'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'Howls Moving Castle_(2004)_English Dub_BRRip_720p_KrazyKarvs_Suj'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. Howls Moving Castle - 2004 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: English
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'Howls Moving Castle_(2004)_English Dub_BRRip_720p_KrazyKarvs_Suj'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: Bluray-720p v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'Lady and the Tramp (1955) 1080p BrRip x264 -YIFY'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. Lady and the Tramp - 1955 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: YIFY
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'Lady and the Tramp (1955) 1080p BrRip x264 -YIFY'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'Atlantis The Lost Empire (2001) BDrip 1080p ENG-ITA x264 - L'imp'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. Atlantis The Lost Empire - 2001 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: English, Italian
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'Atlantis The Lost Empire (2001) BDrip 1080p ENG-ITA x264 - L'imp'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.3|Debug|AggregateLanguages|Selected languages: English, Italian
+2025-04-16 13:41:47.3|Debug|Parser|Parsing string 'The.Blues.Brothers.2000.1998.1080p.BluRay.H264.AAC'
+2025-04-16 13:41:47.3|Debug|Parser|Movie Parsed. The Blues Brothers 2000 - 1998 
+2025-04-16 13:41:47.3|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.3|Debug|QualityParser|Trying to parse quality for 'The.Blues.Brothers.2000.1998.1080p.BluRay.H264.AAC'
+2025-04-16 13:41:47.3|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'My Neighbor Totoro (1988) BD [1080p] AV1-10bit 2CH (Jap Eng)'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. My Neighbor Totoro - 1988 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: 10bit
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: English
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'My Neighbor Totoro (1988) BD [1080p] AV1-10bit 2CH (Jap Eng)'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'Grease 1978 4K 2160p BluRay x265 10bit HDR'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. Grease - 1978 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'Grease 1978 4K 2160p BluRay x265 10bit HDR'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: Bluray-2160p v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'The.Land.Before.Time.II.The.Great.Valley.Adventure.1994.1080p.WEBRip.x265-RBG'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. The Land Before Time II The Great Valley Adventure - 1994 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: RBG
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'The.Land.Before.Time.II.The.Great.Valley.Adventure.1994.1080p.WEBRip.x265-RBG'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: WEBRip-1080p v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'Ponyo[2008]DvDrip-H264 Quad Audio[Eng Jap Fre Spa]AC3 5.1[DXO]'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. Ponyo - 2008 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: H264
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: English, French
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'Ponyo[2008]DvDrip-H264 Quad Audio[Eng Jap Fre Spa]AC3 5.1[DXO]'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: DVD v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English, French
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'The Rescuers 1977 1080p BluRay X264-AMIABLE'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. The Rescuers - 1977 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: AMIABLE
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'The Rescuers 1977 1080p BluRay X264-AMIABLE'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.4|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.4|Debug|Parser|Parsing string 'The.Fifth.Element.1997.2160p.GBR.BluRay.HEVC.TrueHD.7.1.Atmos-Ad'
+2025-04-16 13:41:47.4|Debug|Parser|Movie Parsed. The Fifth Element - 1997 
+2025-04-16 13:41:47.4|Debug|Parser|Release Group parsed: Ad
+2025-04-16 13:41:47.4|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.4|Debug|QualityParser|Trying to parse quality for 'The.Fifth.Element.1997.2160p.GBR.BluRay.HEVC.TrueHD.7.1.Atmos-Ad'
+2025-04-16 13:41:47.4|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.5|Debug|Parser|Parsing string 'Ratatouille 2007.MULTi.UHD.Blu-ray.2160p.HDR.Atmos.7.1.HEVC-DDR'
+2025-04-16 13:41:47.5|Debug|Parser|Movie Parsed. Ratatouille - 2007 
+2025-04-16 13:41:47.5|Debug|Parser|Release Group parsed: DDR
+2025-04-16 13:41:47.5|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.5|Debug|QualityParser|Trying to parse quality for 'Ratatouille 2007.MULTi.UHD.Blu-ray.2160p.HDR.Atmos.7.1.HEVC-DDR'
+2025-04-16 13:41:47.5|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.5|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.5|Debug|Parser|Parsing string 'Hercules.1997.1080p.BluRay.ENG.LATINO.ITALIAN.DD5.1.H264-BEN.THE.MEN'
+2025-04-16 13:41:47.5|Debug|Parser|Movie Parsed. Hercules - 1997 
+2025-04-16 13:41:47.5|Debug|Parser|Release Group parsed: BEN
+2025-04-16 13:41:47.5|Debug|Parser|Languages parsed: Spanish (Latino), English, Italian
+2025-04-16 13:41:47.5|Debug|QualityParser|Trying to parse quality for 'Hercules.1997.1080p.BluRay.ENG.LATINO.ITALIAN.DD5.1.H264-BEN.THE.MEN'
+2025-04-16 13:41:47.5|Debug|Parser|Quality parsed: Bluray-1080p v1
+2025-04-16 13:41:47.5|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Selected languages: Spanish (Latino), English, Italian
+2025-04-16 13:41:47.5|Debug|Parser|Parsing string 'The.Doors.1991.Final.Cut.2160p.UHD.BluRay.X265.10bit.HDR.TrueHD.'
+2025-04-16 13:41:47.5|Debug|Parser|Movie Parsed. The Doors - 1991 
+2025-04-16 13:41:47.5|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.5|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.5|Debug|QualityParser|Trying to parse quality for 'The.Doors.1991.Final.Cut.2160p.UHD.BluRay.X265.10bit.HDR.TrueHD.'
+2025-04-16 13:41:47.5|Debug|Parser|Quality parsed: Bluray-2160p v1
+2025-04-16 13:41:47.5|Debug|Parser|Edition parsed: Final Cut
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.5|Debug|Parser|Parsing string 'Good.Will.Hunting.1997.1080p.BluRay.AVC.DTS-HD.MA.5.1-FGT'
+2025-04-16 13:41:47.5|Debug|Parser|Movie Parsed. Good Will Hunting - 1997 
+2025-04-16 13:41:47.5|Debug|Parser|Release Group parsed: FGT
+2025-04-16 13:41:47.5|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.5|Debug|QualityParser|Trying to parse quality for 'Good.Will.Hunting.1997.1080p.BluRay.AVC.DTS-HD.MA.5.1-FGT'
+2025-04-16 13:41:47.5|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.5|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.5|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.5|Debug|Parser|Parsing string 'A.Bugs.Life.1998.2160p.UHD.BluRay.X265.10bit.HDR.TrueHD.7.1.Atmo'
+2025-04-16 13:41:47.5|Debug|Parser|Movie Parsed. A Bugs Life - 1998 
+2025-04-16 13:41:47.5|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.5|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.5|Debug|QualityParser|Trying to parse quality for 'A.Bugs.Life.1998.2160p.UHD.BluRay.X265.10bit.HDR.TrueHD.7.1.Atmo'
+2025-04-16 13:41:47.5|Debug|Parser|Quality parsed: Bluray-2160p v1
+2025-04-16 13:41:47.5|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.6|Debug|Parser|Parsing string 'The Land Before Time XIV:Journey of the Brave (2016) 1080P WEB-'
+2025-04-16 13:41:47.6|Debug|Parser|Movie Parsed. The Land Before Time XIV:Journey of the Brave - 2016 
+2025-04-16 13:41:47.6|Debug|Parser|Release Group parsed: 
+2025-04-16 13:41:47.6|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.6|Debug|QualityParser|Trying to parse quality for 'The Land Before Time XIV:Journey of the Brave (2016) 1080P WEB-'
+2025-04-16 13:41:47.6|Debug|Parser|Quality parsed: WEBDL-1080p v1
+2025-04-16 13:41:47.6|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.6|Debug|Parser|Parsing string 'Frozen.2013.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR'
+2025-04-16 13:41:47.6|Debug|Parser|Movie Parsed. Frozen - 2013 
+2025-04-16 13:41:47.6|Debug|Parser|Release Group parsed: DDR
+2025-04-16 13:41:47.6|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:47.6|Debug|QualityParser|Trying to parse quality for 'Frozen.2013.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR'
+2025-04-16 13:41:47.6|Debug|Parser|Quality parsed: BR-DISK v1
+2025-04-16 13:41:47.6|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Language couldn't be parsed from release, fallback to movie original language: English
+2025-04-16 13:41:47.6|Debug|AggregateLanguages|Selected languages: English
+2025-04-16 13:41:47.7|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:47.7|Debug|Api|[GET] /api/v3/queue?page=1&pageSize=20&sortDirection=ascending&sortKey=timeleft&includeUnknownMovieItems=true: 200.OK (6 ms)
+2025-04-16 13:41:47.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:47.8|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (5 ms)
+2025-04-16 13:41:48.3|Debug|DownloadedMovieImportService|Processing path: /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC
+2025-04-16 13:41:48.3|Debug|Parser|Parsing string 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:48.3|Debug|Parser|Movie Parsed. Sonic the Hedgehog 3 - 2024 
+2025-04-16 13:41:48.3|Debug|Parser|Release Group parsed: AOC
+2025-04-16 13:41:48.3|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:48.3|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:48.3|Debug|Parser|Quality parsed: WEBDL-2160p v1
+2025-04-16 13:41:48.3|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:48.3|Debug|DownloadedMovieImportService|Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC folder quality: WEBDL-2160p v1
+2025-04-16 13:41:48.3|Debug|DiskScanService|Scanning '/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC' for video files
+2025-04-16 13:41:48.3|Debug|DiskScanService|2 video files were found in /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC
+2025-04-16 13:41:48.3|Debug|ImportDecisionMaker|Analyzing 2/2 files.
+2025-04-16 13:41:48.4|Debug|Parser|Parsing string 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:48.4|Debug|Parser|Movie Parsed. Sonic the Hedgehog 3 - 2024 
+2025-04-16 13:41:48.4|Debug|Parser|Release Group parsed: AOC
+2025-04-16 13:41:48.4|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:48.4|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:48.4|Debug|Parser|Quality parsed: WEBDL-2160p v1
+2025-04-16 13:41:48.4|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:48.4|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv
+2025-04-16 13:41:48.6|Debug|DetectSample|[/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv] does not appear to be a sample. Runtime 01:50:05.3490000 seconds is more than minimum of 600 seconds
+2025-04-16 13:41:48.6|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sample.mkv
+2025-04-16 13:41:48.7|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:48.7|Debug|Api|[GET] /api/v3/command: 200.OK (7 ms)
+2025-04-16 13:41:48.9|Debug|DetectSample|[/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sample.mkv] appears to be a sample. Runtime: 131.257 seconds. Expected at least: 600 seconds
+2025-04-16 13:41:48.9|Debug|Parser|Parsing string 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv'
+2025-04-16 13:41:48.9|Debug|Parser|Movie Parsed. Sonic the Hedgehog 3 - 2024 
+2025-04-16 13:41:48.9|Debug|Parser|Release Group parsed: AOC
+2025-04-16 13:41:48.9|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:48.9|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv'
+2025-04-16 13:41:48.9|Debug|Parser|Quality parsed: WEBDL-2160p v1
+2025-04-16 13:41:48.9|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:48.9|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv
+2025-04-16 13:41:49.0|Debug|AggregateLanguage|Selected languages: English
+2025-04-16 13:41:49.0|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:49.0|Debug|AggregateQuality|Using quality: WEBDL-2160p v1
+2025-04-16 13:41:49.0|Debug|AlreadyImportedSpecification|Skipping already imported check for movie without file
+2025-04-16 13:41:49.0|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv
+2025-04-16 13:41:49.1|Debug|DetectSample|[/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv] does not appear to be a sample. Runtime 01:50:05.3490000 seconds is more than minimum of 600 seconds
+2025-04-16 13:41:49.1|Debug|ImportDecisionMaker|File accepted
+2025-04-16 13:41:49.1|Debug|Parser|Parsing string 'Sample.mkv'
+2025-04-16 13:41:49.1|Debug|Parser|Unable to parse Sample.mkv
+2025-04-16 13:41:49.1|Debug|Parser|Attempting to parse movie info using directory and file names. Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC
+2025-04-16 13:41:49.1|Debug|Parser|Parsing string 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC Sample.mkv'
+2025-04-16 13:41:49.1|Debug|Parser|Movie Parsed. Sonic the Hedgehog 3 - 2024 
+2025-04-16 13:41:49.1|Debug|Parser|Release Group parsed: AOC
+2025-04-16 13:41:49.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:49.1|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC Sample.mkv'
+2025-04-16 13:41:49.1|Debug|Parser|Quality parsed: WEBDL-2160p v1
+2025-04-16 13:41:49.1|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:49.1|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sample.mkv
+2025-04-16 13:41:49.3|Debug|AggregateLanguage|Selected languages: English
+2025-04-16 13:41:49.3|Debug|QualityParser|Trying to parse quality for 'Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC'
+2025-04-16 13:41:49.3|Debug|AggregateQuality|Using quality: WEBDL-2160p v1
+2025-04-16 13:41:49.3|Debug|AlreadyImportedSpecification|Skipping already imported check for movie without file
+2025-04-16 13:41:49.3|Debug|VideoFileInfoReader|Getting media info from /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sample.mkv
+2025-04-16 13:41:49.6|Debug|DetectSample|[/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sample.mkv] appears to be a sample. Runtime: 131.257 seconds. Expected at least: 600 seconds
+2025-04-16 13:41:49.6|Debug|ImportDecisionMaker|File rejected for the following reasons: [Permanent] Sample
+2025-04-16 13:41:49.6|Debug|ImportApprovedMovie|Decisions: 2
+2025-04-16 13:41:49.6|Debug|MovieFileMovingService|Attempting to hardlink movie file: /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv to /media/movies/Sonic the Hedgehog 3 (2024)/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv
+2025-04-16 13:41:49.6|Debug|DiskTransferService|HardLinkOrCopy [/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv] > [/media/movies/Sonic the Hedgehog 3 (2024)/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv]
+2025-04-16 13:41:49.6|Debug|DiskTransferService|Rolling back file copy [/downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv] to [/media/movies/Sonic the Hedgehog 3 (2024)/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv].
+2025-04-16 13:41:52.6|Warn|ImportApprovedMovie|Couldn't import movie /downloads/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv
+
+[v5.21.1.9799] System.UnauthorizedAccessException: Access to the path '/media/movies/Sonic the Hedgehog 3 (2024)/Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv' is denied.
+ ---> System.IO.IOException: Permission denied
+   --- End of inner exception stack trace ---
+   at Interop.CheckIo(Error error, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileSystem.CopyFile(String sourceFullPath, String destFullPath, Boolean overwrite)
+   at NzbDrone.Mono.Disk.DiskProvider.TransferFilePatched(String source, String destination, Boolean overwrite, Boolean move) in ./Radarr.Mono/Disk/DiskProvider.cs:line 356
+   at NzbDrone.Common.Disk.DiskProviderBase.CopyFile(String source, String destination, Boolean overwrite) in ./Radarr.Common/Disk/DiskProviderBase.cs:line 255
+   at NzbDrone.Common.Disk.DiskTransferService.TryCopyFileVerified(String sourcePath, String targetPath, Int64 originalSize) in ./Radarr.Common/Disk/DiskTransferService.cs:line 483
+   at NzbDrone.Common.Disk.DiskTransferService.TransferFile(String sourcePath, String targetPath, TransferMode mode, Boolean overwrite) in ./Radarr.Common/Disk/DiskTransferService.cs:line 296
+   at NzbDrone.Core.MediaFiles.MovieFileMovingService.TransferFile(MovieFile movieFile, Movie movie, String destinationFilePath, TransferMode mode, LocalMovie localMovie) in ./Radarr.Core/MediaFiles/MovieFileMovingService.cs:line 159
+   at NzbDrone.Core.MediaFiles.UpgradeMediaFileService.UpgradeMovieFile(MovieFile movieFile, LocalMovie localMovie, Boolean copyOnly) in ./Radarr.Core/MediaFiles/UpgradeMediaFileService.cs:line 41
+   at NzbDrone.Core.MediaFiles.MovieImport.ImportApprovedMovie.Import(List`1 decisions, Boolean newDownload, DownloadClientItem downloadClientItem, ImportMode importMode) in ./Radarr.Core/MediaFiles/MovieImport/ImportApprovedMovie.cs:line 136
+
+
+2025-04-16 13:41:52.6|Debug|CompletedDownloadService|Not all movies have been imported for Sonic.the.Hedgehog.3.2024.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC
+2025-04-16 13:41:52.6|Debug|DownloadedMovieImportService|Processing path: /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv
+2025-04-16 13:41:52.6|Debug|ImportDecisionMaker|Analyzing 1/1 files.
+2025-04-16 13:41:52.6|Debug|Parser|Parsing string 'The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi'
+2025-04-16 13:41:52.6|Debug|Parser|Movie Parsed. The Wild Robot - 2024 
+2025-04-16 13:41:52.6|Debug|Parser|Release Group parsed: CiNEPHi
+2025-04-16 13:41:52.6|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:52.6|Debug|QualityParser|Trying to parse quality for 'The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi'
+2025-04-16 13:41:52.6|Debug|Parser|Quality parsed: Remux-2160p v1
+2025-04-16 13:41:52.6|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:52.6|Debug|VideoFileInfoReader|Getting media info from /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv
+2025-04-16 13:41:53.0|Debug|DetectSample|[/downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv] does not appear to be a sample. Runtime 01:41:41.1200000 seconds is more than minimum of 600 seconds
+2025-04-16 13:41:53.0|Debug|Parser|Parsing string 'The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv'
+2025-04-16 13:41:53.0|Debug|Parser|Movie Parsed. The Wild Robot - 2024 
+2025-04-16 13:41:53.0|Debug|Parser|Release Group parsed: CiNEPHiLES
+2025-04-16 13:41:53.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 13:41:53.0|Debug|QualityParser|Trying to parse quality for 'The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv'
+2025-04-16 13:41:53.0|Debug|Parser|Quality parsed: Remux-2160p v1
+2025-04-16 13:41:53.0|Debug|Parser|Edition parsed: 
+2025-04-16 13:41:53.0|Debug|VideoFileInfoReader|Getting media info from /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv
+2025-04-16 13:41:53.3|Debug|AggregateLanguage|Selected languages: English
+2025-04-16 13:41:53.3|Debug|QualityParser|Trying to parse quality for 'The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi'
+2025-04-16 13:41:53.3|Debug|AggregateQuality|Using quality: Remux-2160p v1
+2025-04-16 13:41:53.3|Debug|AlreadyImportedSpecification|Skipping already imported check for movie without file
+2025-04-16 13:41:53.3|Debug|VideoFileInfoReader|Getting media info from /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv
+2025-04-16 13:41:53.6|Debug|DetectSample|[/downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv] does not appear to be a sample. Runtime 01:41:41.1200000 seconds is more than minimum of 600 seconds
+2025-04-16 13:41:53.6|Debug|ImportDecisionMaker|File accepted
+2025-04-16 13:41:53.6|Debug|ImportApprovedMovie|Decisions: 1
+2025-04-16 13:41:53.6|Debug|MovieFileMovingService|Attempting to hardlink movie file: /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv to /media/movies/The Wild Robot (2024)/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi.mkv
+2025-04-16 13:41:53.6|Debug|DiskTransferService|HardLinkOrCopy [/downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv] > [/media/movies/The Wild Robot (2024)/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi.mkv]
+2025-04-16 13:41:53.6|Debug|DiskTransferService|Rolling back file copy [/downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv] to [/media/movies/The Wild Robot (2024)/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi.mkv].
+2025-04-16 13:41:56.6|Warn|ImportApprovedMovie|Couldn't import movie /downloads/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHiLES.mkv
+
+[v5.21.1.9799] System.UnauthorizedAccessException: Access to the path '/media/movies/The Wild Robot (2024)/The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi.mkv' is denied.
+ ---> System.IO.IOException: Permission denied
+   --- End of inner exception stack trace ---
+   at Interop.CheckIo(Error error, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileSystem.CopyFile(String sourceFullPath, String destFullPath, Boolean overwrite)
+   at NzbDrone.Mono.Disk.DiskProvider.TransferFilePatched(String source, String destination, Boolean overwrite, Boolean move) in ./Radarr.Mono/Disk/DiskProvider.cs:line 356
+   at NzbDrone.Common.Disk.DiskProviderBase.CopyFile(String source, String destination, Boolean overwrite) in ./Radarr.Common/Disk/DiskProviderBase.cs:line 255
+   at NzbDrone.Common.Disk.DiskTransferService.TryCopyFileVerified(String sourcePath, String targetPath, Int64 originalSize) in ./Radarr.Common/Disk/DiskTransferService.cs:line 483
+   at NzbDrone.Common.Disk.DiskTransferService.TransferFile(String sourcePath, String targetPath, TransferMode mode, Boolean overwrite) in ./Radarr.Common/Disk/DiskTransferService.cs:line 296
+   at NzbDrone.Core.MediaFiles.MovieFileMovingService.TransferFile(MovieFile movieFile, Movie movie, String destinationFilePath, TransferMode mode, LocalMovie localMovie) in ./Radarr.Core/MediaFiles/MovieFileMovingService.cs:line 159
+   at NzbDrone.Core.MediaFiles.UpgradeMediaFileService.UpgradeMovieFile(MovieFile movieFile, LocalMovie localMovie, Boolean copyOnly) in ./Radarr.Core/MediaFiles/UpgradeMediaFileService.cs:line 41
+   at NzbDrone.Core.MediaFiles.MovieImport.ImportApprovedMovie.Import(List`1 decisions, Boolean newDownload, DownloadClientItem downloadClientItem, ImportMode importMode) in ./Radarr.Core/MediaFiles/MovieImport/ImportApprovedMovie.cs:line 136
+
+
+2025-04-16 13:41:56.6|Debug|CompletedDownloadService|Not all movies have been imported for The.Wild.Robot.2024.2160p.UHD.Blu-ray.Remux.DV.HDR.HEVC.TrueHD.Atmos.7.1-CiNEPHi
+2025-04-16 13:41:56.9|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:56.9|Debug|Api|[GET] /api/v3/queue?page=1&pageSize=20&sortDirection=ascending&sortKey=timeleft&includeUnknownMovieItems=true: 200.OK (5 ms)
+2025-04-16 13:41:56.9|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:56.9|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:41:56.9|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (11 ms)
+2025-04-16 13:41:56.9|Debug|Api|[GET] /api/v3/command: 200.OK (5 ms)
+2025-04-16 13:42:26.4|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 13:42:26.4|Debug|Api|[GET] /api/v3/qualityProfile?apikey=(removed) 200.OK (4 ms)
+2025-04-16 13:42:35.2|Error|TaskExtensions|Task Error
+
+[v5.21.1.9799] code = Full (13), message = System.Data.SQLite.SQLiteException (0x800007FF): database or disk is full
+database or disk is full
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1142
+   at Dapper.SqlMapper.QueryMultipleImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 1125
+   at NzbDrone.Core.Datastore.BasicRepository`1.Insert(IDbConnection connection, IDbTransaction transaction, TModel model) in ./Radarr.Core/Datastore/BasicRepository.cs:line 188
+   at NzbDrone.Core.Datastore.BasicRepository`1.Insert(TModel model) in ./Radarr.Core/Datastore/BasicRepository.cs:line 151
+   at NzbDrone.Core.Messaging.Commands.CommandQueueManager.Push[TCommand](TCommand command, CommandPriority priority, CommandTrigger trigger) in ./Radarr.Core/Messaging/Commands/CommandQueueManager.cs:line 140
+   at NzbDrone.Core.Jobs.Scheduler.ExecuteCommands() in ./Radarr.Core/Jobs/Sched2025-04-16 14:11:05.5|Debug|ImportListSyncService|No enabled import lists, skipping sync and cleaning
+2025-04-16 14:11:05.6|Info|RssSyncService|Starting RSS Sync
+2025-04-16 14:11:05.6|Debug|FetchAndParseRssService|Available indexers 2
+2025-04-16 14:11:05.6|Debug|Torznab|Downloading Feed https://prowlarr.romptele.com/1/api?t=movie&cat=2000,2020,2040,2060,2030,2045&extended=1&apikey=(removed)&offset=0&limit=100
+2025-04-16 14:11:05.6|Debug|Torznab|Downloading Feed https://prowlarr.romptele.com/2/api?t=movie&cat=2000&extended=1&apikey=(removed)&offset=0&limit=100
+2025-04-16 14:11:05.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:05.8|Debug|Api|[GET] /api/v3/command: 200.OK (13 ms)
+2025-04-16 14:11:05.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:05.8|Debug|Api|[GET] /api/v3/command: 200.OK (2 ms)
+2025-04-16 14:11:05.9|Warn|DownloadMonitoringService|Unable to retrieve queue and history items from qBittorrent
+
+[v5.21.1.9799] System.Net.Http.HttpRequestException: Connection refused (qbittorrent.romptele.com:5080)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 337
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 313
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 115
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Radarr.Common/Http/HttpClient.cs:line 157
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 128
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxyV2.IsApiSupported(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxyV2.cs:line 35
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.FetchProxy(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 81
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.<>c__DisplayClass7_0.<GetProxyCache>b__0() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 76
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in ./Radarr.Common/Cache/Cached.cs:line 99
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxyCache(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 69
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxy(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 59
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrent.GetItems() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrent.cs:line 220
+   at NzbDrone.Core.Download.TrackedDownloads.DownloadMonitoringService.ProcessClientDownloads(IDownloadClient downloadClient) in ./Radarr.Core/Download/TrackedDownloads/DownloadMonitoringService.cs:line 90
+
+
+2025-04-16 14:11:06.0|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:06.0|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (3 ms)
+2025-04-16 14:11:06.0|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:06.0|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (3 ms)
+2025-04-16 14:11:06.0|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:06.0|Debug|Api|[GET] /api/v3/command: 200.OK (2 ms)
+2025-04-16 14:11:06.0|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:06.0|Debug|Api|[GET] /api/v3/command: 200.OK (2 ms)
+2025-04-16 14:11:06.9|Debug|FetchAndParseRssService|Found 104 reports
+2025-04-16 14:11:06.9|Info|DownloadDecisionMaker|Processing 104 releases
+2025-04-16 14:11:06.9|Debug|DownloadDecisionMaker|Processing release 'Raqa.2024.720p.BluRay.x264-JustWatch' from 'The Pirate Bay (Prowlarr)'
+2025-04-16 14:11:06.9|Debug|Parser|Parsing string 'Raqa.2024.720p.BluRay.x264-JustWatch'
+2025-04-16 14:11:06.9|Debug|Parser|Movie Parsed. Raqa - 2024 
+2025-04-16 14:11:06.9|Debug|Parser|Release Group parsed: JustWatch
+2025-04-16 14:11:06.9|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:06.9|Debug|QualityParser|Trying to parse quality for 'Raqa.2024.720p.BluRay.x264-JustWatch'
+2025-04-16 14:11:06.9|Debug|Parser|Quality parsed: Bluray-720p v1
+2025-04-16 14:11:06.9|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Raqa (2024)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'Raqa.2024.720p.BluRay.x264-JustWatch' from 'The Pirate Bay (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'The Soul Eater - Horror 2024 Eng Fre Por Rus Multi Subs 720p [H264-mp4]' from 'The Pirate Bay (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'The Soul Eater - Horror 2024 Eng Fre Por Rus Multi Subs 720p [H264-mp4]'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. The Soul Eater - Horror - 2024 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: mp4
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: English, French, Russian
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'The Soul Eater - Horror 2024 Eng Fre Por Rus Multi Subs 720p [H264-mp4]'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: HDTV-720p v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'The Soul Eater - Horror (2024)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'The Soul Eater - Horror 2024 Eng Fre Por Rus Multi Subs 720p [H264-mp4]' from 'The Pirate Bay (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '9 11 inside the Presidents War Room 1080p ATVp WEB-DL DDP5 1 Atmos H 264-pl' from 'The Pirate Bay (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '9 11 inside the Presidents War Room 1080p ATVp WEB-DL DDP5 1 Atmos H 264-pl'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse 9 11 inside the Presidents War Room 1080p ATVp WEB-DL DDP5 1 Atmos H 264-pl
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Miss.Julie.2014.1080p.AMZN.WEBRip.DDP5.1.x264-monkee' from 'The Pirate Bay (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Miss.Julie.2014.1080p.AMZN.WEBRip.DDP5.1.x264-monkee'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Miss Julie - 2014 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: monkee
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'Miss.Julie.2014.1080p.AMZN.WEBRip.DDP5.1.x264-monkee'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: WEBRip-1080p v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Miss Julie (2014)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'Miss.Julie.2014.1080p.AMZN.WEBRip.DDP5.1.x264-monkee' from 'The Pirate Bay (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'NHL 2001 PlayStation 2 PAL Gameplay' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'NHL 2001 PlayStation 2 PAL Gameplay'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. NHL - 2001 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'NHL 2001 PlayStation 2 PAL Gameplay'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'NHL (2001)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'NHL 2001 PlayStation 2 PAL Gameplay' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Cybersix EP. 6.1080p' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Cybersix EP. 6.1080p'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse Cybersix EP. 6.1080p
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Commercial Airplane Reliability Tour' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Commercial Airplane Reliability Tour'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse Commercial Airplane Reliability Tour
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '20250415-Lokala-Nyheter-Halland-15-apr-22-00' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '20250415-Lokala-Nyheter-Halland-15-apr-22-00'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse 20250415-Lokala-Nyheter-Halland-15-apr-22-00
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '2. Two Worlds' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '2. Two Worlds'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse 2. Two Worlds
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'South Park Chef is Cartman's Dad' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'South Park Chef is Cartman's Dad'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse South Park Chef is Cartman's Dad
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Adolf Hitler Proclamation To The German Nation 10.2.1933' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Adolf Hitler Proclamation To The German Nation 10.2.1933'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Adolf Hitler Proclamation To The German Nation 10 2 - 1933 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'Adolf Hitler Proclamation To The German Nation 10.2.1933'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Adolf Hitler Proclamation To The German Nation 10 2 (1933)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'Adolf Hitler Proclamation To The German Nation 10.2.1933' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25, 2022]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25, 2022]'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25 - 2022 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25, 2022]'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25 (2022)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'Movement Spawns from Greek Government Plans to Close Eleonas Refugee Camp [Archive, July 25, 2022]' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'TKN Live： Pokémon Wifi Battles Session 36 TKN Live： Pokémon Wifi Battles Session 58 [v 74525889]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'TKN Live： Pokémon Wifi Battles Session 36 TKN Live： Pokémon Wifi Battles Session 58 [v 74525889]'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse TKN Live： Pokémon Wifi Battles Session 36 TKN Live： Pokémon Wifi Battles Session 58 [v 74525889]
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Black Rob Whoa!' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Black Rob Whoa!'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse Black Rob Whoa!
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '太鼓の達人　泥の分際で私だけの大切を奪おうだなんて/ツユ　叩いてみた！ 【コスプレ】' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '太鼓の達人　泥の分際で私だけの大切を奪おうだなんて/ツユ　叩いてみた！ 【コスプレ】'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse 太鼓の達人　泥の分際で私だけの大切を奪おうだなんて/ツユ　叩いてみた！ 【コスプレ】
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '20250415-Lokala-Nyheter-Halland-15-apr-19-55' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '20250415-Lokala-Nyheter-Halland-15-apr-19-55'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse 20250415-Lokala-Nyheter-Halland-15-apr-19-55
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime - 1988 Action Thriller Rated R' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime - 1988 Action Thriller Rated R'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime - 1988 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime - 1988 Action Thriller Rated R'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime (1988)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'Peter Weller Sam Elliott ((( Shakedown ‧ Action/ Crime - 1988 Action Thriller Rated R' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Luxury Cars - CRU Automotive' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Luxury Cars - CRU Automotive'
+2025-04-16 14:11:07.0|Debug|Parser|Unable to parse Luxury Cars - CRU Automotive
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'You Animal (2020)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'You Animal (2020)'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. You Animal - 2020 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'You Animal (2020)'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'You Animal (2020)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release 'You Animal (2020)' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release '[Vintage VHS] Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows (1962)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string '[Vintage VHS] Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows (1962)'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows - 1962 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: Vintage VHS
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for '[Vintage VHS] Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows (1962)'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.0|Debug|ParsingService|No matching movie for titles 'Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows (1962)'
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Release '[Vintage VHS] Jazz Scene USA: Stan Kenton and His Orchestra, Two Complete Televised Shows (1962)' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.0|Debug|DownloadDecisionMaker|Processing release 'Episódio De Bet On Your Baby Uruguay De 04.18.2013 Exibido Na TV Cultura Em 08.03.2015 Parte 2' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.0|Debug|Parser|Parsing string 'Episódio De Bet On Your Baby Uruguay De 04.18.2013 Exibido Na TV Cultura Em 08.03.2015 Parte 2'
+2025-04-16 14:11:07.0|Debug|Parser|Movie Parsed. Episódio De Bet On Your Baby Uruguay De 04 18 - 2013 
+2025-04-16 14:11:07.0|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.0|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.0|Debug|QualityParser|Trying to parse quality for 'Episódio De Bet On Your Baby Uruguay De 04.18.2013 Exibido Na TV Cultura Em 08.03.2015 Parte 2'
+2025-04-16 14:11:07.0|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.0|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Episódio De Bet On Your Baby Uruguay De 04 18 (2013)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Episódio De Bet On Your Baby Uruguay De 04.18.2013 Exibido Na TV Cultura Em 08.03.2015 Parte 2' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '[S01.E03]『履いてください、鷹峰さん』第03話 "一番イイのを味わって"' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '[S01.E03]『履いてください、鷹峰さん』第03話 "一番イイのを味わって"'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse [S01.E03]『履いてください、鷹峰さん』第03話 "一番イイのを味わって"
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04-2025)(ABC Entertains)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04-2025)(ABC Entertains)'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04 - 2025 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04-2025)(ABC Entertains)'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04 (2025)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Rage Vault - Going Solo, Side Projects and Supergroups (Part I)(16-04-2025)(ABC Entertains)' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'السيرة النبوية ـ الدرس الثاني' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'السيرة النبوية ـ الدرس الثاني'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse السيرة النبوية ـ الدرس الثاني
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Airplanes' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Airplanes'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Airplanes
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'bird' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'bird'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse bird
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Talk for Future: Leistbares Wohnen und Klimaschutz' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Talk for Future: Leistbares Wohnen und Klimaschutz'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Talk for Future: Leistbares Wohnen und Klimaschutz
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '20250415-Lokala-Nyheter-Halland-15-apr-18-33' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '20250415-Lokala-Nyheter-Halland-15-apr-18-33'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 20250415-Lokala-Nyheter-Halland-15-apr-18-33
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '2025 04 15 Meeting LFI Belfort' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '2025 04 15 Meeting LFI Belfort'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 2025 04 15 Meeting LFI Belfort
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'CELEBRATE THE 115th INTERNATIONAL DAY OF LABOR' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'CELEBRATE THE 115th INTERNATIONAL DAY OF LABOR'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse CELEBRATE THE 115th INTERNATIONAL DAY OF LABOR
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Xiao Ying Video 1744824512866 HD' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Xiao Ying Video 1744824512866 HD'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Xiao Ying Video 1744824512866 HD
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'In Shot 20240523 081446282' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'In Shot 20240523 081446282'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse In Shot 20240523 081446282
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'EL FANTASMA DEL BAÑ O QUE CONCEDE DESEOS✨ Jibaku Shounen Hanako Kun Resumen Temporada 1' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'EL FANTASMA DEL BAÑ O QUE CONCEDE DESEOS✨ Jibaku Shounen Hanako Kun Resumen Temporada 1'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse EL FANTASMA DEL BAÑ O QUE CONCEDE DESEOS✨ Jibaku Shounen Hanako Kun Resumen Temporada 1
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '20250416-Lokala-Nyheter-Gavleborg-16-apr-09-33' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '20250416-Lokala-Nyheter-Gavleborg-16-apr-09-33'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 20250416-Lokala-Nyheter-Gavleborg-16-apr-09-33
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'BUILD THE BROADEST UNITED FRONT TO STRENGTHEN THE ORGANS OF POLITICAL POWER AND THE PEOPLE'S DEMOCRATIC GOVERNMENT' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'BUILD THE BROADEST UNITED FRONT TO STRENGTHEN THE ORGANS OF POLITICAL POWER AND THE PEOPLE'S DEMOCRATIC GOVERNMENT'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse BUILD THE BROADEST UNITED FRONT TO STRENGTHEN THE ORGANS OF POLITICAL POWER AND THE PEOPLE'S DEMOCRATIC GOVERNMENT
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '1992. Bennys Video' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '1992. Bennys Video'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 1992. Bennys Video
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Barátok közt - Gizi a bíróságon' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Barátok közt - Gizi a bíróságon'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Barátok közt - Gizi a bíróságon
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Last Died Sims 4 Baby Finale' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Last Died Sims 4 Baby Finale'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Last Died Sims 4 Baby Finale
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 56' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 56'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 56
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '19 10 1446' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '19 10 1446'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 19 10 1446
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Peak Demo ( 1)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Peak Demo ( 1)'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Peak Demo ( 1)
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '20250416-Lokala-Nyheter-Gavleborg-16-apr-09-07' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '20250416-Lokala-Nyheter-Gavleborg-16-apr-09-07'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 20250416-Lokala-Nyheter-Gavleborg-16-apr-09-07
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'r babi hutan. Tetapi, babi hutan yang' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'r babi hutan. Tetapi, babi hutan yang'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse r babi hutan. Tetapi, babi hutan yang
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Arlene Herson Interviews Malcolm Forbes Part 1&2' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Arlene Herson Interviews Malcolm Forbes Part 1&2'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Arlene Herson Interviews Malcolm Forbes Part 1&2
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '太鼓の達人　ダーリンダンス　叩いてみた！ 【地雷系コスプレ】' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '太鼓の達人　ダーリンダンス　叩いてみた！ 【地雷系コスプレ】'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 太鼓の達人　ダーリンダンス　叩いてみた！ 【地雷系コスプレ】
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Finishing and Testing Liberty Engine Parts / Lumber Yard / Liberty Airplane Fuselage Construction' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Finishing and Testing Liberty Engine Parts / Lumber Yard / Liberty Airplane Fuselage Construction'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Finishing and Testing Liberty Engine Parts / Lumber Yard / Liberty Airplane Fuselage Construction
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Adele - Set Fire To The Rain' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Adele - Set Fire To The Rain'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Adele - Set Fire To The Rain
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Arlene Herson Interviews Jerry Orbach' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Arlene Herson Interviews Jerry Orbach'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Arlene Herson Interviews Jerry Orbach
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'PUEBLO INDIANS. 1' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'PUEBLO INDIANS. 1'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse PUEBLO INDIANS. 1
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board 2025-04-15' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board 2025-04-15'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board - 2025 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board 2025-04-15'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board (2025)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Bismarck-Mandan Metropolitan Planning Organization (MPO) Policy Board 2025-04-15' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'UNA INFECCION SE EXPANDE - Dead Space (Capitulo 2)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'UNA INFECCION SE EXPANDE - Dead Space (Capitulo 2)'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse UNA INFECCION SE EXPANDE - Dead Space (Capitulo 2)
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Heute Big Contenttag!  I !holzkern !holy' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Heute Big Contenttag!  I !holzkern !holy'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Heute Big Contenttag!  I !holzkern !holy
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Cybersix EP. 5.1080p' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Cybersix EP. 5.1080p'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Cybersix EP. 5.1080p
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Blues Brothers Illinois Nazis' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Blues Brothers Illinois Nazis'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Blues Brothers Illinois Nazis
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 59' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 59'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse TKN Live: Pokémon Wifi Battles - Session 36 TKN Live: Pokémon Wifi Battles - Session 59
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25, 2022]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25, 2022]'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25 - 2022 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25, 2022]'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25 (2022)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Two Palestinians Killed During Israeli Raid on Nablus [Archive, July 25, 2022]' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Dave The WAVE Noticed Something ODD About The BLUE ORIGIN Launch.. Stay Tuned For Major Blue Update' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Dave The WAVE Noticed Something ODD About The BLUE ORIGIN Launch.. Stay Tuned For Major Blue Update'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Dave The WAVE Noticed Something ODD About The BLUE ORIGIN Launch.. Stay Tuned For Major Blue Update
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Pesan Solidaritas untuk Pemuda Baru Indonesia (PEMBARU)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Pesan Solidaritas untuk Pemuda Baru Indonesia (PEMBARU)'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Pesan Solidaritas untuk Pemuda Baru Indonesia (PEMBARU)
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Naked And Famous: Tricky' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Naked And Famous: Tricky'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Naked And Famous: Tricky
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Gespräch mit Christian Lindner In Einbeck' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Gespräch mit Christian Lindner In Einbeck'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Gespräch mit Christian Lindner In Einbeck
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'EFFector 37.4 | Congress Moves Closer to Risky Internet Takedown Law' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'EFFector 37.4 | Congress Moves Closer to Risky Internet Takedown Law'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse EFFector 37.4 | Congress Moves Closer to Risky Internet Takedown Law
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'House Chamber Proceedings 03/03/2025' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'House Chamber Proceedings 03/03/2025'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. House Chamber Proceedings 03/03 - 2025 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'House Chamber Proceedings 03/03/2025'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'House Chamber Proceedings 03/03 (2025)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'House Chamber Proceedings 03/03/2025' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Okita Rinka (沖田凜花 Rinka) Hamburger Girl' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Okita Rinka (沖田凜花 Rinka) Hamburger Girl'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Okita Rinka (沖田凜花 Rinka) Hamburger Girl
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Jetset Collapse Videos - Dominican Republic' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Jetset Collapse Videos - Dominican Republic'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Jetset Collapse Videos - Dominican Republic
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '20250416-Lokala-Nyheter-Gavleborg-16-apr-08-33' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '20250416-Lokala-Nyheter-Gavleborg-16-apr-08-33'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 20250416-Lokala-Nyheter-Gavleborg-16-apr-08-33
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Entertainment Commission' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Entertainment Commission'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Entertainment Commission
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Singing Cats' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Singing Cats'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Singing Cats
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Whistleblower Aid' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Whistleblower Aid'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Whistleblower Aid
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Please let me know if digital downloading works' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Please let me know if digital downloading works'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse Please let me know if digital downloading works
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Hoshino (2016)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Hoshino (2016)'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. Hoshino - 2016 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'Hoshino (2016)'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Hoshino (2016)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Hoshino (2016)' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'Finance Budget and Personnel Committee 4 15 2025' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'Finance Budget and Personnel Committee 4 15 2025'
+2025-04-16 14:11:07.1|Debug|Parser|Movie Parsed. Finance Budget and Personnel Committee 4 15 - 2025 
+2025-04-16 14:11:07.1|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.1|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.1|Debug|QualityParser|Trying to parse quality for 'Finance Budget and Personnel Committee 4 15 2025'
+2025-04-16 14:11:07.1|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.1|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.1|Debug|ParsingService|No matching movie for titles 'Finance Budget and Personnel Committee 4 15 (2025)'
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Release 'Finance Budget and Personnel Committee 4 15 2025' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'An electric aeroplane? #future #fullycharged #electric #brian' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'An electric aeroplane? #future #fullycharged #electric #brian'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse An electric aeroplane? #future #fullycharged #electric #brian
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '000004' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '000004'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 000004
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release '20250416-Lokala-Nyheter-Gavleborg-16-apr-08-07' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string '20250416-Lokala-Nyheter-Gavleborg-16-apr-08-07'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse 20250416-Lokala-Nyheter-Gavleborg-16-apr-08-07
+2025-04-16 14:11:07.1|Debug|DownloadDecisionMaker|Processing release 'How I Design OC Character :: Photoshop Tutorial' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.1|Debug|Parser|Parsing string 'How I Design OC Character :: Photoshop Tutorial'
+2025-04-16 14:11:07.1|Debug|Parser|Unable to parse How I Design OC Character :: Photoshop Tutorial
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Seson 1 Escoldas 1: Yinos Blue lavashe di Snakto?' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Seson 1 Escoldas 1: Yinos Blue lavashe di Snakto?'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Seson 1 Escoldas 1: Yinos Blue lavashe di Snakto?
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22, 2022]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Movie Parsed. Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22 - 2022 
+2025-04-16 14:11:07.2|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.2|Debug|QualityParser|Trying to parse quality for 'Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.2|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.2|Debug|ParsingService|No matching movie for titles 'Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22 (2022)'
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Release 'Minneapolis Encampment Evicted, Possessions Thrown Away [Archive, July 22, 2022]' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Reply to @henry.kofman How I made the last two videos' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Reply to @henry.kofman How I made the last two videos'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Reply to @henry.kofman How I made the last two videos
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Astrofísica relativista 2025. Clase 22.' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Astrofísica relativista 2025. Clase 22.'
+2025-04-16 14:11:07.2|Debug|Parser|Movie Parsed. Astrofísica relativista - 2025 
+2025-04-16 14:11:07.2|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.2|Debug|QualityParser|Trying to parse quality for 'Astrofísica relativista 2025. Clase 22.'
+2025-04-16 14:11:07.2|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.2|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.2|Debug|ParsingService|No matching movie for titles 'Astrofísica relativista (2025)'
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Release 'Astrofísica relativista 2025. Clase 22.' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Are we supposed to WORSHIP Jesus?' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Are we supposed to WORSHIP Jesus?'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Are we supposed to WORSHIP Jesus?
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release '38 K' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string '38 K'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse 38 K
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'My Current Car' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'My Current Car'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse My Current Car
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Amiga 1200 Longplay Teresa WW' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Amiga 1200 Longplay Teresa WW'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Amiga 1200 Longplay Teresa WW
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'VID 20231125 173153' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'VID 20231125 173153'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse VID 20231125 173153
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'The more I use ChatGPT, the more convinced I am that is not a compute...' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'The more I use ChatGPT, the more convinced I am that is not a compute...'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse The more I use ChatGPT, the more convinced I am that is not a compute...
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Valerie And Her Week Of Wonders OST Medley' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Valerie And Her Week Of Wonders OST Medley'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Valerie And Her Week Of Wonders OST Medley
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Dusj eller Dø!' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Dusj eller Dø!'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Dusj eller Dø!
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Boat Club Reunion Dinner in Putney #reunion #rowing' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Boat Club Reunion Dinner in Putney #reunion #rowing'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Boat Club Reunion Dinner in Putney #reunion #rowing
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21, 2022]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Movie Parsed. Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21 - 2022 
+2025-04-16 14:11:07.2|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.2|Debug|QualityParser|Trying to parse quality for 'Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.2|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.2|Debug|ParsingService|No matching movie for titles 'Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21 (2022)'
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Release 'Palestinians Speak Out During Biden's Visit to Palestine [Archive, July 21, 2022]' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'The Truth About the Liberty Motor' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'The Truth About the Liberty Motor'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse The Truth About the Liberty Motor
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'The Entire History of Cat Memes' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'The Entire History of Cat Memes'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse The Entire History of Cat Memes
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release '40 K' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string '40 K'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse 40 K
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Replying to @Kelvin Where is it? #discord #community #friendship' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Replying to @Kelvin Where is it? #discord #community #friendship'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Replying to @Kelvin Where is it? #discord #community #friendship
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'NoPixel 4.0 // Episode 13 // Tony Corleone' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'NoPixel 4.0 // Episode 13 // Tony Corleone'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse NoPixel 4.0 // Episode 13 // Tony Corleone
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release '36 K' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string '36 K'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse 36 K
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release '37 K' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string '37 K'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse 37 K
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'As Minhas 24 Horas De Meditação' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'As Minhas 24 Horas De Meditação'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse As Minhas 24 Horas De Meditação
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Kalamazoo Public Schools Board of Education - April 10, 2025 Kalamazoo Public Schools Board of Education Meeting Highlights' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Kalamazoo Public Schools Board of Education - April 10, 2025 Kalamazoo Public Schools Board of Education Meeting Highlights'
+2025-04-16 14:11:07.2|Debug|Parser|Movie Parsed. Kalamazoo Public Schools Board of Education - April 10 - 2025 
+2025-04-16 14:11:07.2|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.2|Debug|QualityParser|Trying to parse quality for 'Kalamazoo Public Schools Board of Education - April 10, 2025 Kalamazoo Public Schools Board of Education Meeting Highlights'
+2025-04-16 14:11:07.2|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.2|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.2|Debug|ParsingService|No matching movie for titles 'Kalamazoo Public Schools Board of Education - April 10 (2025)'
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Release 'Kalamazoo Public Schools Board of Education - April 10, 2025 Kalamazoo Public Schools Board of Education Meeting Highlights' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release '39 K' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string '39 K'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse 39 K
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Peakportfolio.ai DEMO ( 2) ( 1)' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Peakportfolio.ai DEMO ( 2) ( 1)'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Peakportfolio.ai DEMO ( 2) ( 1)
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Segal Jewelry Reviews: A More Detailed Examination of Their Distinct Craftsmanship' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Segal Jewelry Reviews: A More Detailed Examination of Their Distinct Craftsmanship'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Segal Jewelry Reviews: A More Detailed Examination of Their Distinct Craftsmanship
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Climate change #climatechange' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Climate change #climatechange'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse Climate change #climatechange
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21, 2022]' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Movie Parsed. Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21 - 2022 
+2025-04-16 14:11:07.2|Debug|Parser|Release Group parsed: 
+2025-04-16 14:11:07.2|Debug|Parser|Languages parsed: Unknown
+2025-04-16 14:11:07.2|Debug|QualityParser|Trying to parse quality for 'Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21, 2022]'
+2025-04-16 14:11:07.2|Debug|Parser|Quality parsed: Unknown v1
+2025-04-16 14:11:07.2|Debug|Parser|Edition parsed: 
+2025-04-16 14:11:07.2|Debug|ParsingService|No matching movie for titles 'Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21 (2022)'
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Release 'Residents and Supporters Prepare for Encampment Eviction in Minneapolis [Archive, July 21, 2022]' from 'Internet Archive (Prowlarr)' rejected for the following reasons: [Permanent] Unknown Movie. Unable to identify correct movie using release name.
+2025-04-16 14:11:07.2|Debug|DownloadDecisionMaker|Processing release 'The Truth About the Liberty Motor' from 'Internet Archive (Prowlarr)'
+2025-04-16 14:11:07.2|Debug|Parser|Parsing string 'The Truth About the Liberty Motor'
+2025-04-16 14:11:07.2|Debug|Parser|Unable to parse The Truth About the Liberty Motor
+2025-04-16 14:11:07.2|Info|RssSyncService|RSS Sync Completed. Reports found: 104, Reports grabbed: 0
+2025-04-16 14:11:07.2|Debug|PendingReleaseService|Removing failed releases from pending
+2025-04-16 14:11:07.3|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:07.3|Debug|Api|[GET] /api/v3/command: 200.OK (2 ms)
+2025-04-16 14:11:11.0|Debug|DownloadClientCheck|Unable to communicate with qBittorrent
+
+[v5.21.1.9799] System.Net.Http.HttpRequestException: Connection refused (qbittorrent.romptele.com:5080)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 337
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 313
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 115
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Radarr.Common/Http/HttpClient.cs:line 157
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 128
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxyV2.IsApiSupported(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxyV2.cs:line 35
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.FetchProxy(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 81
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.<>c__DisplayClass7_0.<GetProxyCache>b__0() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 76
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in ./Radarr.Common/Cache/Cached.cs:line 99
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxyCache(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 69
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxy(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 59
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrent.GetItems() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrent.cs:line 220
+   at NzbDrone.Core.HealthCheck.Checks.DownloadClientCheck.Check() in ./Radarr.Core/HealthCheck/Checks/DownloadClientCheck.cs:line 40
+
+
+2025-04-16 14:11:11.0|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:11:11.0|Debug|Api|[GET] /api/v3/health: 200.OK (1 ms)
+2025-04-16 14:12:35.6|Warn|DownloadMonitoringService|Unable to retrieve queue and history items from qBittorrent
+
+[v5.21.1.9799] System.Net.Http.HttpRequestException: Connection refused (qbittorrent.romptele.com:5080)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 337
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 313
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Radarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 115
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Radarr.Common/Http/HttpClient.cs:line 157
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Radarr.Common/Http/HttpClient.cs:line 128
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxyV2.IsApiSupported(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxyV2.cs:line 35
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.FetchProxy(QBittorrentSettings settings) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 81
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.<>c__DisplayClass7_0.<GetProxyCache>b__0() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 76
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in ./Radarr.Common/Cache/Cached.cs:line 99
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxyCache(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 69
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrentProxySelector.GetProxy(QBittorrentSettings settings, Boolean force) in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrentProxySelector.cs:line 59
+   at NzbDrone.Core.Download.Clients.QBittorrent.QBittorrent.GetItems() in ./Radarr.Core/Download/Clients/QBittorrent/QBittorrent.cs:line 220
+   at NzbDrone.Core.Download.TrackedDownloads.DownloadMonitoringService.ProcessClientDownloads(IDownloadClient downloadClient) in ./Radarr.Core/Download/TrackedDownloads/DownloadMonitoringService.cs:line 90
+
+
+2025-04-16 14:12:35.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:12:35.8|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (3 ms)
+2025-04-16 14:12:35.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:12:35.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:12:35.8|Debug|Api|[GET] /api/v3/command: 200.OK (1 ms)
+2025-04-16 14:12:35.8|Debug|Api|[GET] /api/v3/queue/details?all=true: 200.OK (5 ms)
+2025-04-16 14:12:35.8|Debug|Radarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-16 14:12:35.8|Debug|Api|[GET] /api/v3/command: 200.OK (5 ms)
+2025-04-16 14:12:37.1|Info|Microsoft.Hosting.Lifetime|Application is shutting down...
+2025-04-16 14:12:37.7|Info|ConsoleApp|Exiting main.

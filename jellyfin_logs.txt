@@ -1,0 +1,165 @@
+[migrations] started
+[migrations] no migrations found
+───────────────────────────────────────
+
+      ██╗     ███████╗██╗ ██████╗
+      ██║     ██╔════╝██║██╔═══██╗
+      ██║     ███████╗██║██║   ██║
+      ██║     ╚════██║██║██║   ██║
+      ███████╗███████║██║╚██████╔╝
+      ╚══════╝╚══════╝╚═╝ ╚═════╝
+
+   Brought to you by linuxserver.io
+───────────────────────────────────────
+
+To support the app dev(s) visit:
+Jellyfin: https://opencollective.com/jellyfin
+
+To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    0
+User GID:    1307
+───────────────────────────────────────
+[custom-init] No custom files found, skipping...
+[23:28:11] [INF] [1] Main: Jellyfin version: 10.10.6
+[23:28:11] [INF] [1] Main: Environment Variables: ["[JELLYFIN_DATA_DIR, /config/data]", "[JELLYFIN_PublishedServerUrl, https://jellyfin.romptele.com]", "[DOTNET_SYSTEM_GLOBALIZATION_INVARIANT, 1]", "[JELLYFIN_WEB_DIR, /usr/share/jellyfin/web]", "[JELLYFIN_LOG_DIR, /config/log]", "[JELLYFIN_CACHE_DIR, /config/cache]", "[JELLYFIN_CONFIG_DIR, /config]"]
+[23:28:11] [INF] [1] Main: Arguments: ["/usr/lib/jellyfin/bin/jellyfin.dll", "--ffmpeg=/usr/lib/jellyfin-ffmpeg/ffmpeg"]
+[23:28:11] [INF] [1] Main: Operating system: Ubuntu 24.04.2 LTS
+[23:28:11] [INF] [1] Main: Architecture: X64
+[23:28:11] [INF] [1] Main: 64-Bit Process: True
+[23:28:11] [INF] [1] Main: User Interactive: True
+[23:28:11] [INF] [1] Main: Processor count: 2
+[23:28:11] [INF] [1] Main: Program data path: /config/data
+[23:28:11] [INF] [1] Main: Log directory path: /config/log
+[23:28:11] [INF] [1] Main: Config directory path: /config
+[23:28:11] [INF] [1] Main: Cache path: /config/cache
+[23:28:11] [INF] [1] Main: Temp directory path: /tmp/jellyfin
+[23:28:11] [INF] [1] Main: Web resources path: /usr/share/jellyfin/web
+[23:28:11] [INF] [1] Main: Application directory: /usr/lib/jellyfin/bin/
+[23:28:12] [INF] [1] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: /config/cache
+[23:28:12] [INF] [1] Emby.Server.Implementations.ApplicationHost: Loading assemblies
+[23:28:13] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded assembly Novell.Directory.Ldap.NETStandard, Version=3.6.0.0, Culture=neutral, PublicKeyToken=510c34e9dec7f86f from /config/data/plugins/LDAP Authentication_20.0.0.0/Novell.Directory.Ldap.NETStandard.dll
+[23:28:13] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded assembly LDAP-Auth, Version=20.0.0.0, Culture=neutral, PublicKeyToken=null from /config/data/plugins/LDAP Authentication_20.0.0.0/LDAP-Auth.dll
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Defined LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Defined LAN exclusions: []
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Used LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Filtered interface addresses: ["127.0.0.1", "172.18.0.3"]
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Bind Addresses ["0.0.0.0"]
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Remote IP filter is Allowlist
+[23:28:13] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Filtered subnets: []
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: LDAP-Auth 20.0.0.0
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: TMDb 10.10.6.0
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: Studio Images 10.10.6.0
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: OMDb 10.10.6.0
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: MusicBrainz 10.10.6.0
+[23:28:22] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: AudioDB 10.10.6.0
+[23:28:23] [INF] [1] Main: Kestrel is listening on 0.0.0.0
+[23:28:26] [WRN] [1] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: The WebRootPath was not found: /run/s6-rc:s6-rc-init:PenhPL/servicedirs/svc-jellyfin/wwwroot. Static files may be unavailable.
+[23:28:26] [INF] [1] Emby.Server.Implementations.ApplicationHost: Running startup tasks
+[23:28:26] [INF] [12] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory /media/tvshows
+[23:28:26] [INF] [1] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for Generate Trickplay Images set to fire at 2025-04-26 03:00:00.000 +00:00, which is 03:31:33.2039556 from now.
+[23:28:26] [INF] [1] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for Extract Chapter Images set to fire at 2025-04-26 02:00:00.000 +00:00, which is 02:31:33.1876771 from now.
+[23:28:27] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Found ffmpeg version 7.0.2
+[23:28:27] [INF] [10] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory /media/movies
+[23:28:27] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available decoders: ["libdav1d", "av1", "av1_cuvid", "av1_qsv", "h264", "h264_qsv", "h264_cuvid", "hevc", "hevc_qsv", "hevc_cuvid", "mpeg2video", "mpeg2_qsv", "mpeg2_cuvid", "mpeg4", "mpeg4_cuvid", "msmpeg4", "vc1_qsv", "vc1_cuvid", "vp8", "libvpx", "vp8_cuvid", "vp8_qsv", "vp9", "libvpx-vp9", "vp9_cuvid", "vp9_qsv", "aac", "ac3", "ac4", "dca", "flac", "mp3", "truehd"]
+[23:28:27] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available encoders: ["libsvtav1", "av1_nvenc", "av1_qsv", "av1_amf", "av1_vaapi", "libx264", "h264_amf", "h264_nvenc", "h264_qsv", "h264_v4l2m2m", "h264_vaapi", "libx265", "hevc_amf", "hevc_nvenc", "hevc_qsv", "hevc_vaapi", "mjpeg_qsv", "mjpeg_vaapi", "aac", "libfdk_aac", "ac3", "alac", "dca", "flac", "libmp3lame", "libopus", "truehd", "libvorbis", "srt"]
+[23:28:27] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available filters: ["bwdif_cuda", "deinterlace_qsv", "deinterlace_vaapi", "flip_vulkan", "hwupload_cuda", "hwupload_vaapi", "libplacebo", "overlay_opencl", "overlay_qsv", "overlay_vaapi", "overlay_vulkan", "overlay_cuda", "procamp_vaapi", "scale_cuda", "scale_opencl", "scale_qsv", "scale_vaapi", "scale_vulkan", "tonemapx", "tonemap_cuda", "tonemap_opencl", "tonemap_vaapi", "transpose_cuda", "transpose_opencl", "transpose_vaapi", "transpose_vulkan", "vpp_qsv", "yadif_cuda", "zscale", "alphasrc"]
+[23:28:28] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available hwaccel types: ["cuda", "vaapi", "qsv", "drm", "opencl", "vulkan"]
+[23:28:30] [INF] [8] Emby.Server.Implementations.ScheduledTasks.TaskManager: Clean Transcode Directory Completed after 0 minute(s) and 0 seconds
+[23:28:30] [INF] [10] Emby.Server.Implementations.ScheduledTasks.TaskManager: Update Plugins Completed after 0 minute(s) and 0 seconds
+[23:28:32] [INF] [10] Emby.Server.Implementations.ScheduledTasks.TaskManager: Clean up collections and playlists Completed after 0 minute(s) and 0 seconds
+[migrations] started
+[migrations] no migrations found
+usermod: no changes
+───────────────────────────────────────
+
+      ██╗     ███████╗██╗ ██████╗
+      ██║     ██╔════╝██║██╔═══██╗
+      ██║     ███████╗██║██║   ██║
+      ██║     ╚════██║██║██║   ██║
+      ███████╗███████║██║╚██████╔╝
+      ╚══════╝╚══════╝╚═╝ ╚═════╝
+
+   Brought to you by linuxserver.io
+───────────────────────────────────────
+
+To support the app dev(s) visit:
+Jellyfin: https://opencollective.com/jellyfin
+
+To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    0
+User GID:    1307
+───────────────────────────────────────
+[custom-init] No custom files found, skipping...
+[23:28:45] [INF] [1] Main: Jellyfin version: 10.10.6
+[23:28:45] [INF] [1] Main: Environment Variables: ["[JELLYFIN_CACHE_DIR, /config/cache]", "[JELLYFIN_PublishedServerUrl, https://jellyfin.romptele.com]", "[JELLYFIN_LOG_DIR, /config/log]", "[JELLYFIN_CONFIG_DIR, /config]", "[DOTNET_SYSTEM_GLOBALIZATION_INVARIANT, 1]", "[JELLYFIN_DATA_DIR, /config/data]", "[JELLYFIN_WEB_DIR, /usr/share/jellyfin/web]"]
+[23:28:45] [INF] [1] Main: Arguments: ["/usr/lib/jellyfin/bin/jellyfin.dll", "--ffmpeg=/usr/lib/jellyfin-ffmpeg/ffmpeg"]
+[23:28:45] [INF] [1] Main: Operating system: Ubuntu 24.04.2 LTS
+[23:28:45] [INF] [1] Main: Architecture: X64
+[23:28:45] [INF] [1] Main: 64-Bit Process: True
+[23:28:45] [INF] [1] Main: User Interactive: True
+[23:28:45] [INF] [1] Main: Processor count: 2
+[23:28:45] [INF] [1] Main: Program data path: /config/data
+[23:28:45] [INF] [1] Main: Log directory path: /config/log
+[23:28:45] [INF] [1] Main: Config directory path: /config
+[23:28:45] [INF] [1] Main: Cache path: /config/cache
+[23:28:45] [INF] [1] Main: Temp directory path: /tmp/jellyfin
+[23:28:45] [INF] [1] Main: Web resources path: /usr/share/jellyfin/web
+[23:28:45] [INF] [1] Main: Application directory: /usr/lib/jellyfin/bin/
+[23:28:46] [INF] [1] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: /config/cache
+[23:28:46] [INF] [1] Emby.Server.Implementations.ApplicationHost: Loading assemblies
+[23:28:46] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded assembly Novell.Directory.Ldap.NETStandard, Version=3.6.0.0, Culture=neutral, PublicKeyToken=510c34e9dec7f86f from /config/data/plugins/LDAP Authentication_20.0.0.0/Novell.Directory.Ldap.NETStandard.dll
+[23:28:46] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded assembly LDAP-Auth, Version=20.0.0.0, Culture=neutral, PublicKeyToken=null from /config/data/plugins/LDAP Authentication_20.0.0.0/LDAP-Auth.dll
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Defined LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Defined LAN exclusions: []
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Used LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Filtered interface addresses: ["127.0.0.1", "172.18.0.3"]
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Bind Addresses ["0.0.0.0"]
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Remote IP filter is Allowlist
+[23:28:47] [INF] [1] Jellyfin.Networking.Manager.NetworkManager: Filtered subnets: []
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: LDAP-Auth 20.0.0.0
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: TMDb 10.10.6.0
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: Studio Images 10.10.6.0
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: OMDb 10.10.6.0
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: MusicBrainz 10.10.6.0
+[23:28:57] [INF] [1] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: AudioDB 10.10.6.0
+[23:28:57] [INF] [1] Main: Kestrel is listening on 0.0.0.0
+[23:29:00] [WRN] [1] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: The WebRootPath was not found: /run/s6-rc:s6-rc-init:kcdNLD/servicedirs/svc-jellyfin/wwwroot. Static files may be unavailable.
+[23:29:00] [INF] [1] Emby.Server.Implementations.ApplicationHost: Running startup tasks
+[23:29:00] [INF] [13] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory /media/tvshows
+[23:29:01] [INF] [1] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for Generate Trickplay Images set to fire at 2025-04-26 03:00:00.000 +00:00, which is 03:30:58.8353891 from now.
+[23:29:01] [INF] [1] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for Extract Chapter Images set to fire at 2025-04-26 02:00:00.000 +00:00, which is 02:30:58.7662580 from now.
+[23:29:01] [INF] [10] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory /media/movies
+[23:29:01] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Found ffmpeg version 7.0.2
+[23:29:02] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available decoders: ["libdav1d", "av1", "av1_cuvid", "av1_qsv", "h264", "h264_qsv", "h264_cuvid", "hevc", "hevc_qsv", "hevc_cuvid", "mpeg2video", "mpeg2_qsv", "mpeg2_cuvid", "mpeg4", "mpeg4_cuvid", "msmpeg4", "vc1_qsv", "vc1_cuvid", "vp8", "libvpx", "vp8_cuvid", "vp8_qsv", "vp9", "libvpx-vp9", "vp9_cuvid", "vp9_qsv", "aac", "ac3", "ac4", "dca", "flac", "mp3", "truehd"]
+[23:29:02] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available encoders: ["libsvtav1", "av1_nvenc", "av1_qsv", "av1_amf", "av1_vaapi", "libx264", "h264_amf", "h264_nvenc", "h264_qsv", "h264_v4l2m2m", "h264_vaapi", "libx265", "hevc_amf", "hevc_nvenc", "hevc_qsv", "hevc_vaapi", "mjpeg_qsv", "mjpeg_vaapi", "aac", "libfdk_aac", "ac3", "alac", "dca", "flac", "libmp3lame", "libopus", "truehd", "libvorbis", "srt"]
+[23:29:03] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available filters: ["bwdif_cuda", "deinterlace_qsv", "deinterlace_vaapi", "flip_vulkan", "hwupload_cuda", "hwupload_vaapi", "libplacebo", "overlay_opencl", "overlay_qsv", "overlay_vaapi", "overlay_vulkan", "overlay_cuda", "procamp_vaapi", "scale_cuda", "scale_opencl", "scale_qsv", "scale_vaapi", "scale_vulkan", "tonemapx", "tonemap_cuda", "tonemap_opencl", "tonemap_vaapi", "transpose_cuda", "transpose_opencl", "transpose_vaapi", "transpose_vulkan", "vpp_qsv", "yadif_cuda", "zscale", "alphasrc"]
+[23:29:04] [INF] [10] Emby.Server.Implementations.ScheduledTasks.TaskManager: Clean Transcode Directory Completed after 0 minute(s) and 0 seconds
+[23:29:04] [INF] [10] Emby.Server.Implementations.ScheduledTasks.TaskManager: Update Plugins Completed after 0 minute(s) and 0 seconds
+[23:29:05] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available hwaccel types: ["cuda", "vaapi", "qsv", "drm", "opencl", "vulkan"]
+[23:29:05] [INF] [13] Emby.Server.Implementations.ScheduledTasks.TaskManager: Clean up collections and playlists Completed after 0 minute(s) and 1 seconds
+[23:29:40] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: FFmpeg: /usr/lib/jellyfin-ffmpeg/ffmpeg
+[23:29:40] [INF] [1] Emby.Server.Implementations.ApplicationHost: ServerId: 19053236ebf3427dbc3126a804bd4896
+[23:29:40] [INF] [1] Emby.Server.Implementations.ApplicationHost: Core startup complete
+[23:29:40] [INF] [1] Main: Startup complete 0:00:55.6997361
+[ls.io-init] done.
+[23:49:23] [INF] [50] Emby.Server.Implementations.HttpServer.WebSocketManager: WS 172.18.0.2 request
+[23:49:39] [INF] [54] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:49:40] [INF] [57] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:49:40] [INF] [56] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:49:40] [INF] [57] Emby.Server.Implementations.Session.SessionManager: Playback stopped reported by app Jellyfin Web 10.10.6 playing The Rescuers Down Under. Stopped at 0 ms
+[23:50:12] [INF] [53] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:50:13] [INF] [53] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:50:13] [INF] [59] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for Henry. EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[23:50:13] [INF] [55] Emby.Server.Implementations.Session.SessionManager: Playback stopped reported by app Jellyfin Web 10.10.6 playing The Rescuers Down Under. Stopped at 0 ms

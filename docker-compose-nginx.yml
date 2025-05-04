@@ -1,21 +1,22 @@
-version: '2'
 name: nginx
 services:
   nginx:
-    image: nginx:1.27.1-alpine
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
     container_name: nginx
     networks:
       - mynetwork
     volumes:
-      - nginx-config:/etc/nginx
-      - letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./www/html:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
       - 443:443
     restart: unless-stopped
 
 volumes:
-  nginx-config:
   letsencrypt:
 
 networks:

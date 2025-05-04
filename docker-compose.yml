@@ -1,6 +1,149 @@
-version: "3.9"
 name: media-stack
 services:
+
+  authentik-redis:
+    profiles: ["no-vpn"]
+    image: redis:7-alpine
+    command: redis-server --save 60 1 --loglevel warning
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - authentik-redis:/data
+    networks:
+      - mynetwork
+
+  authentik-postgresql:
+    profiles: ["no-vpn"]
+    image: postgres:15-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d authentik -U authentik"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      POSTGRES_DB: authentik
+      POSTGRES_USER: authentik
+      POSTGRES_PASSWORD: authentik-pass
+    volumes:
+      - authentik-postgresql:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+  authentik:
+    profiles: ["no-vpn"]
+    image: ghcr.io/goauthentik/server:2023.10.7
+    restart: unless-stopped
+    command: ["server", "--bind", "0.0.0.0:9000"]
+    ports:
+      - "9000:9000"
+    environment:
+      AUTHENTIK_REDIS__HOST: authentik-redis
+      AUTHENTIK_REDIS__DB: 1
+      AUTHENTIK_POSTGRESQL__HOST: authentik-postgresql
+      AUTHENTIK_POSTGRESQL__USER: authentik
+      AUTHENTIK_POSTGRESQL__NAME: authentik
+      AUTHENTIK_POSTGRESQL__PASSWORD: authentik-pass
+      AUTHENTIK_DATABASE: postgres://authentik:authentik-pass@authentik-postgresql:5432/authentik
+      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:-"$(openssl rand -base64 32)"}
+      AUTHENTIK_ERROR_REPORTING__ENABLED: "false"
+      AUTHENTIK_LOG_LEVEL: debug
+      AUTHENTIK_DISABLE_STARTUP_ANALYTICS: "true"
+      AUTHENTIK_DEFAULT_URL: https://authentik.romptele.com
+      AUTHENTIK_PROXY__TRUSTED_PROXIES__0: "0.0.0.0/0"
+      AUTHENTIK_PROXY__TRUSTED_PROXIES__1: "::/0"
+      AUTHENTIK_EMAIL__HOST: ${AUTHENTIK_EMAIL__HOST:-"smtp.gmail.com"}
+      AUTHENTIK_EMAIL__PORT: ${AUTHENTIK_EMAIL__PORT:-"587"}
+      AUTHENTIK_EMAIL__USERNAME: ${AUTHENTIK_EMAIL__USERNAME:-""}
+      AUTHENTIK_EMAIL__PASSWORD: ${AUTHENTIK_EMAIL__PASSWORD:-""}
+      AUTHENTIK_EMAIL__USE_TLS: "true"
+      AUTHENTIK_EMAIL__FROM: ${AUTHENTIK_EMAIL__FROM:-"authentik@romptele.com"}
+      AUTHENTIK_BOOTSTRAP_PASSWORD: ${AUTHENTIK_BOOTSTRAP_PASSWORD:-"$(openssl rand -base64 32)"}
+      AUTHENTIK_TEMPLATES__DIR: /custom-templates
+    user: "1000:1000"
+    volumes:
+      - authentik-media:/media
+      - authentik-custom-templates:/templates
+      - authentik-geoip:/geoip
+      - authentik-certs:/certs
+      - ./authentik/custom-templates:/custom-templates
+    networks:
+      - mynetwork
+    depends_on:
+      authentik-postgresql:
+        condition: service_healthy
+      authentik-redis:
+        condition: service_healthy
+
+  authentik-worker:
+    profiles: ["no-vpn"]
+    image: ghcr.io/goauthentik/server:2023.10.7
+    restart: unless-stopped
+    command: ["worker"]
+    environment:
+      AUTHENTIK_REDIS__HOST: authentik-redis
+      AUTHENTIK_REDIS__DB: 1
+      AUTHENTIK_POSTGRESQL__HOST: authentik-postgresql
+      AUTHENTIK_POSTGRESQL__USER: authentik
+      AUTHENTIK_POSTGRESQL__NAME: authentik
+      AUTHENTIK_POSTGRESQL__PASSWORD: authentik-pass
+      AUTHENTIK_DATABASE: postgres://authentik:authentik-pass@authentik-postgresql:5432/authentik
+      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:-"$(openssl rand -base64 32)"}
+      AUTHENTIK_ERROR_REPORTING__ENABLED: "false"
+      AUTHENTIK_LOG_LEVEL: debug
+      AUTHENTIK_DISABLE_STARTUP_ANALYTICS: "true"
+      AUTHENTIK_DEFAULT_URL: https://authentik.romptele.com
+      AUTHENTIK_PROXY__TRUSTED_PROXIES__0: "0.0.0.0/0"
+      AUTHENTIK_PROXY__TRUSTED_PROXIES__1: "::/0"
+      AUTHENTIK_EMAIL__HOST: ${AUTHENTIK_EMAIL__HOST:-"smtp.gmail.com"}
+      AUTHENTIK_EMAIL__PORT: ${AUTHENTIK_EMAIL__PORT:-"587"}
+      AUTHENTIK_EMAIL__USERNAME: ${AUTHENTIK_EMAIL__USERNAME:-""}
+      AUTHENTIK_EMAIL__PASSWORD: ${AUTHENTIK_EMAIL__PASSWORD:-""}
+      AUTHENTIK_EMAIL__USE_TLS: "true"
+      AUTHENTIK_EMAIL__FROM: ${AUTHENTIK_EMAIL__FROM:-"authentik@romptele.com"}
+      AUTHENTIK_BOOTSTRAP_PASSWORD: ${AUTHENTIK_BOOTSTRAP_PASSWORD:-"$(openssl rand -base64 32)"}
+    user: "1000:1000"
+    volumes:
+      - authentik-media:/media
+      - authentik-custom-templates:/templates
+      - authentik-geoip:/geoip
+      - authentik-certs:/certs
+    networks:
+      - mynetwork
+    depends_on:
+      authentik-postgresql:
+        condition: service_healthy
+      authentik-redis:
+        condition: service_healthy
+
+  ldap:
+    profiles: ["no-vpn"]
+    image: osixia/openldap:1.5.0
+    container_name: ldap
+    hostname: ldap.romptele.com
+    command: --copy-service --loglevel debug
+    environment:
+      LDAP_ORGANISATION: "romptele"
+      LDAP_DOMAIN: "romptele.com"
+      LDAP_BASE_DN: "dc=romptele,dc=com"
+      LDAP_ADMIN_PASSWORD: "adminpassword123"
+      LDAP_CONFIG_PASSWORD: "configpassword123"
+      LDAP_READONLY_USER: "false"
+      LDAP_TLS: "false"
+      LDAP_TLS_VERIFY_CLIENT: "never"
+    volumes:
+      - ./ldap/data:/var/lib/ldap
+      - ./ldap/config:/etc/ldap/slapd.d
+    ports:
+      - "389:389"
+      - "636:636"
+    networks:
+      - mynetwork
+    restart: unless-stopped
 
   # To use/enable VPN, Run this compose file with --profile=vpn. Its highly recommended to use VPN.
   vpn:
@@ -63,31 +206,25 @@ services:
     image: lscr.io/linuxserver/qbittorrent:5.0.4
 
     # Unomment below if vpn is enabled
-    # depends_on:               # Uncomment this line if vpn is enabled
-      # vpn:                   # Uncomment this line if vpn is enabled
-      #   condition: service_healthy # Uncomment this line if vpn is enabled
-
-    # Comment below lines if VPN is enabled
-    networks:               # Comment this line if vpn is enabled
-      - mynetwork           # Comment this line if vpn is enabled
-
-    # Unomment below line if vpn is enabled
-    # network_mode: service:vpn
-
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
-      - WEBUI_PORT=5080
-    volumes:
-      - qbittorrent-config:/config
-      - torrent-downloads:/downloads
-
-    ## Comment/Disable below ports if VPN is enabled
+    # To connect to qbittorrent outside the VPN network you need to set up a static container IP
+    # depends_on:
+    #   - wireguard
+    # network_mode: service:wireguard  # Comment this line if VPN is disabled
+    networks:
+      - mynetwork  # Comment this line if VPN is enabled
     ports:
       - 5080:5080
       - 6881:6881
       - 6881:6881/udp
+    environment:
+      - PUID=0
+      - PGID=1307
+      - TZ=UTC
+      - WEBUI_PORT=5080
+    volumes:
+      - qbittorrent-config:/config
+      - /mnt/media-storage/downloads:/downloads
+      - /mnt/media-storage:/media
     restart: "unless-stopped"
 
   radarr:
@@ -100,14 +237,15 @@ services:
     #   mynetwork:
     #     ipv4_address: ${RADARR_STATIC_CONTAINER_IP} # It should be available IPv4 address in range of docker network `mynetwork` e.g. 172.20.0.2
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=1307
       - TZ=UTC
-    ports:
-      - 7878:7878
     volumes:
       - radarr-config:/config
-      - torrent-downloads:/downloads
+      - /mnt/media-storage/downloads:/downloads
+      - /mnt/media-storage:/media
+    ports:
+      - 7878:7878
     restart: "unless-stopped"
 
   sonarr:
@@ -120,12 +258,13 @@ services:
     #   mynetwork:
     #     ipv4_address: ${SONARR_STATIC_CONTAINER_IP} # It should be available IPv4 address in range of docker network `mynetwork` e.g. 172.20.0.2
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=1307
       - TZ=UTC
     volumes:
       - sonarr-config:/config
-      - torrent-downloads:/downloads
+      - /mnt/media-storage/downloads:/downloads
+      - /mnt/media-storage:/media
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -144,7 +283,7 @@ services:
     networks:               # Comment this line if vpn is enabled
       - mynetwork           # Comment this line if vpn is enabled
     environment:
-      - PUID=1000
+      - PUID=0
       - PGID=1000
       - TZ=UTC
     volumes:
@@ -176,14 +315,21 @@ services:
     profiles: ["vpn", "no-vpn"]
     image: fallenbagel/jellyseerr:2.5.2
     container_name: jellyseerr
+    hostname: jellyseerr
     networks:
       - mynetwork
     environment:
       - PUID=1000
-      - PGID=1000
+      - PGID=1307
       - TZ=UTC
+      - NODE_ENV=production
+      - APP_URL=https://romptele.com/jellyseerr
+      - TMDB_LANGUAGE=en
+      - TMDB_REGION=US
+      - TMDB_APIKEY=${TMDB_APIKEY}
     volumes:
       - jellyseerr-config:/app/config
+      - /mnt/media-storage:/media
     ports:
       - 5055:5055
     restart: unless-stopped
@@ -195,14 +341,18 @@ services:
     networks:
       - mynetwork
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=1307
       - TZ=UTC
+      - JELLYFIN_PublishedServerUrl=https://jellyfin.romptele.com
+      - JELLYFIN_CACHE_DIR=/config/cache
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
     volumes:
       - jellyfin-config:/config
-      - torrent-downloads:/data
-  # devices:
-   #  - /dev/videoN:/dev/videoN # Mount GPU device 
+      - /mnt/media-storage/downloads:/data
+      - /mnt/media-storage:/media
+      - /mnt/media-storage/transcodes:/transcode
+      - /root/media-stack/jellyfin-custom:/custom
     ports:
       - 8096:8096
       - 7359:7359/udp
@@ -242,7 +392,7 @@ services:
     # - CMA_RADARR_ENABLE_NOTIFICATION=${CMA_RADARR_ENABLE_NOTIFICATION:-""}
 
 volumes:
-  torrent-downloads:
+  # torrent-downloads:  # This volume is no longer needed
   radarr-config:
   sonarr-config:
   prowlarr-config:
@@ -250,6 +400,12 @@ volumes:
   qbittorrent-config:
   jellyseerr-config:
   recommendarr-data:
+  authentik-redis:
+  authentik-postgresql:
+  authentik-media:
+  authentik-custom-templates:
+  authentik-geoip:
+  authentik-certs:
   # cleanmyarr-config:
 
 networks:

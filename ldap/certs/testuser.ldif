@@ -1,0 +1,11 @@
+dn: uid=testuser,dc=romptele,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: Test User
+sn: User
+uid: testuser
+uidNumber: 1000
+gidNumber: 1000
+homeDirectory: /home/testuser
+userPassword: testpass123

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RompTele Admin Dashboard</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #9b59b6;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --card-background: rgba(255, 255, 255, 0.1);
+            --card-hover: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        header {
+            background-color: var(--background-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        header img {
+            max-width: 18%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        header a:hover img {
+            opacity: 0.8;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .services-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .service-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .service-link:hover {
+            background-color: #8e44ad;
+            transform: translateY(-2px);
+        }
+
+        .home-link {
+            margin-top: 2rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .home-link:hover {
+            opacity: 1;
+        }
+
+        .card-description {
+            color: #ccc;
+            font-style: italic;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://romptele.com">
+            <img src="/assets/img/logos/banner3.png" alt="RompTele Logo">
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="services-card">
+            <div class="services-grid">
+                <a href="https://prowlarr.romptele.com" class="service-link">Prowlarr</a>
+                <a href="https://qbittorrent.romptele.com" class="service-link">qBittorrent</a>
+                <a href="https://radarr.romptele.com" class="service-link">Radarr</a>
+                <a href="https://sonarr.romptele.com" class="service-link">Sonarr</a>
+                <a href="https://jellyfin.romptele.com" class="service-link">Jellyfin</a>
+                <a href="https://jellyseerr.romptele.com" class="service-link">Jellyseerr</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

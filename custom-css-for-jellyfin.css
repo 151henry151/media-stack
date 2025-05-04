@@ -1,0 +1,154 @@
+/* Make login form more visible */
+#loginPage .centeredView {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Customize the dashboard */
+.dashboardSection {
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+}
+
+/* Customize card appearance */
+.cardBox {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #1a1a1a; /* Dark gray background for cards */
+}
+
+.cardBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Change theme colors to monotone black */
+:root {
+  --theme-primary-color: #303030; /* Dark gray primary color */
+  --theme-accent-text-color: #ffffff; /* White text for contrast */
+}
+
+/* Enhanced dark mode styling */
+.mainDrawer {
+  background-color: #121212; /* Very dark background for sidebar */
+}
+
+.navMenuOption-selected {
+  background-color: #303030; /* Selected menu item background */
+}
+
+.button-primary {
+  background-color: #303030 !important; /* Primary button background */
+}
+
+.button-primary:hover {
+  background-color: #404040 !important; /* Primary button hover */
+}
+
+/* Make text more readable */
+.sectionTitle {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* INCREASE LOGO SIZES BY 1.75x */
+
+/* Increase the size of the banner logo on all pages */
+.pageTitleWithDefaultLogo {
+  background-size: auto 1.75em !important;
+  height: 1.75em !important;
+  background-position: center left !important;
+  margin-bottom: 0.5em !important;
+}
+
+/* Increase the size of the main dashboard logo */
+.layout-desktop .pageTitleWithDefaultLogo {
+  background-size: auto 1.75em !important;
+  height: 1.75em !important;
+}
+
+/* Increase the size of icon in sidebar and other places */
+.pageTitle-icon {
+  transform: scale(1.75) !important;
+  margin-right: 0.5em !important;
+}
+
+/* Make the logo in the login page larger */
+#loginPage .pageTitleWithLogo {
+  background-size: auto 1.75em !important;
+  height: 1.75em !important;
+}
+
+/* Adjust the app icon in mobile mode */
+.headerButton.headerButtonRight.headerUserButton.paper-icon-button-light {
+  transform: scale(1.75) !important;
+}
+
+/* Increase header height to accommodate larger logo when needed */
+.skinHeader {
+  min-height: 4.5em !important;
+}
+
+/* Fix for smaller screens */
+@media (max-width: 800px) {
+  .pageTitleWithDefaultLogo {
+    margin-left: 0.5em !important;
+  }
+}
+
+/* CUSTOM LOGO REPLACEMENTS */
+
+/* Replace the main logo */
+.pageTitleWithLogo, 
+.pageTitleWithDefaultLogo {
+  background-image: url('images/icon-transparent-romptele.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+}
+
+/* Header logo replacement */
+.headerLogo {
+  background-image: url('images/icon-transparent-romptele.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Replace the login page logo */
+#loginPage .emby-collapse-content div img {
+  content: url('images/banner1.png') !important;
+}
+
+/* Alternative login logo replacement */
+.loginLogo {
+  background-image: url('images/banner1.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* More thorough logo replacements */
+.app-logo, .app-logo-img, .logoIcon {
+  background-image: url('images/icon-transparent-romptele.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Hide the Jellyfin logo text if needed */
+.headerLogoText {
+  display: none !important;
+}
+
+/* If using Material Icon for Jellyfin logo */
+.material-icons.logo {
+  background-image: url('images/icon-transparent-romptele.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  color: transparent !important;
+  font-size: 0 !important;
+}

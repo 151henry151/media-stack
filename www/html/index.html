@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RompTele</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #9b59b6;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --card-background: rgba(255, 255, 255, 0.1);
+            --card-hover: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #splashscreen-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/assets/img/splashscreen.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body.logo-hover #splashscreen-bg {
+            opacity: 0.75;
+            transition: opacity 5s ease;
+        }
+
+        #splashscreen-img {
+            display: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            background-color: transparent;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        header:hover {
+            background-color: transparent;
+        }
+
+        header img {
+            max-height: 240px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22vw;
+            margin-top: 2rem;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        @media (max-width: 430px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                justify-items: center;
+            }
+            
+            .services-grid > div {
+                width: fit-content;
+            }
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            margin-bottom: 0.5rem;
+            width: 150px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .service-card h2 {
+            color: var(--text-color);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .service-card p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+            box-shadow: 0 8px 25px rgba(155, 89, 182, 0.5),
+                        inset 0 4px 0 rgba(255, 255, 255, 0.4),
+                        inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+                         0 0 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .service-link:hover {
+            background-color: #8e44ad;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(155, 89, 182, 0.7),
+                        inset 0 4px 0 rgba(255, 255, 255, 0.4),
+                        inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+                         0 0 0 rgba(255, 255, 255, 0.8),
+                         0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .service-link:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.2),
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+                         0 0 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .admin-card {
+            background: transparent;
+            border-radius: 6px;
+            padding: 0.25rem;
+            box-shadow: none;
+            backdrop-filter: none;
+            width: 50px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .admin-button {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.4);
+            padding: 0.15rem 0.25rem;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-family: inherit;
+            opacity: 0.4;
+        }
+
+        .admin-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            opacity: 0.6;
+            transform: translateY(-1px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-description {
+            color: #ccc;
+            font-style: italic;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="splashscreen-bg"></div>
+    <img id="splashscreen-img" src="https://jellyfin.romptele.com/Branding/Splashscreen" alt="Splashscreen" crossorigin="anonymous">
+    <header>
+        <img src="/assets/img/logos/icon-transparent-romptele.png" alt="RompTele Logo" class="logo">
+    </header>
+
+    <div class="container">
+        <div class="services-grid">
+            <div>
+                <a href="https://jellyfin.romptele.com" class="service-link">Watch</a>
+            </div>
+
+            <div>
+                <a href="https://jellyseerr.romptele.com" class="service-link">Request</a>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <a href="https://admin.romptele.com" class="admin-button">Admin</a>
+        </div>
+    </div>
+
+    <script>
+        const logo = document.querySelector('.logo');
+        const body = document.body;
+
+        logo.addEventListener('mouseenter', () => {
+            console.log('Logo hover started');
+            body.classList.add('logo-hover');
+        });
+
+        logo.addEventListener('mouseleave', () => {
+            console.log('Logo hover ended');
+            body.classList.remove('logo-hover');
+        });
+    </script>
+</body>
+</html> 
