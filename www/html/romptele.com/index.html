@@ -231,19 +231,28 @@
             text-align: center;
             margin-bottom: 2rem;
         }
+
+        /* Add a class for hover effect sync if needed */
+        .service-link-hover,
+        .logo-hovered {
+            filter: brightness(1.2) drop-shadow(0 0 10px #9b59b6);
+            /* visually indicate hover on both */
+        }
     </style>
 </head>
 <body>
     <div id="splashscreen-bg"></div>
     <img id="splashscreen-img" src="https://jellyfin.romptele.com/Branding/Splashscreen" alt="Splashscreen" crossorigin="anonymous">
     <header>
-        <img src="/assets/img/logos/icon-transparent-romptele.png" alt="RompTele Logo" class="logo">
+        <a href="https://jellyfin.romptele.com" id="logo-link">
+            <img src="/assets/img/logos/icon-transparent-romptele.png" alt="RompTele Logo" class="logo">
+        </a>
     </header>
 
     <div class="container">
         <div class="services-grid">
             <div>
-                <a href="https://jellyfin.romptele.com" class="service-link">Watch</a>
+                <a href="https://jellyfin.romptele.com" class="service-link" id="watch-btn">Watch</a>
             </div>
 
             <div>
@@ -258,17 +267,34 @@
 
     <script>
         const logo = document.querySelector('.logo');
+        const logoLink = document.getElementById('logo-link');
+        const watchBtn = document.getElementById('watch-btn');
         const body = document.body;
 
-        logo.addEventListener('mouseenter', () => {
-            console.log('Logo hover started');
-            body.classList.add('logo-hover');
-        });
+        function setHoverState(isHovering) {
+            if (isHovering) {
+                body.classList.add('logo-hover');
+                watchBtn.classList.add('service-link-hover');
+                logo.classList.add('logo-hovered');
+            } else {
+                body.classList.remove('logo-hover');
+                watchBtn.classList.remove('service-link-hover');
+                logo.classList.remove('logo-hovered');
+            }
+        }
 
-        logo.addEventListener('mouseleave', () => {
-            console.log('Logo hover ended');
-            body.classList.remove('logo-hover');
-        });
+        // Hover on logo or WATCH button triggers both
+        logo.addEventListener('mouseenter', () => setHoverState(true));
+        logo.addEventListener('mouseleave', () => setHoverState(false));
+        watchBtn.addEventListener('mouseenter', () => setHoverState(true));
+        watchBtn.addEventListener('mouseleave', () => setHoverState(false));
+
+        // Clicking the logo goes to the WATCH button's link (already handled by <a>)
+        // Optionally, prevent default and trigger click on watchBtn for analytics or effects
+        // logoLink.addEventListener('click', e => {
+        //     e.preventDefault();
+        //     watchBtn.click();
+        // });
     </script>
 </body>
 </html> 
