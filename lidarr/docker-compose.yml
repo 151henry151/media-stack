@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  lidarr:
+    image: linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=0
+      - PGID=1307
+      - TZ=Europe/London
+    volumes:
+      - ../../config/lidarr:/config
+      - /mnt/media-storage/music:/music
+      - /mnt/media-storage/downloads:/downloads
+    ports:
+      - 8686:8686
+    restart: unless-stopped

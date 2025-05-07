@@ -154,7 +154,7 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.2s;
+            transition: transform 1.5s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.2s, background-color 0.2s, text-shadow 0.2s;
             box-shadow: 0 8px 25px rgba(155, 89, 182, 0.5),
                         inset 0 4px 0 rgba(255, 255, 255, 0.4),
                         inset 0 -4px 0 rgba(0, 0, 0, 0.2);
@@ -166,15 +166,16 @@
                          0 0 0 rgba(255, 255, 255, 0.8);
         }
 
-        .service-link:hover {
+        .service-link:hover, .service-link-hover {
             background-color: #8e44ad;
-            transform: translateY(-2px);
+            transform: scale(1.1) translateY(-2px);
             box-shadow: 0 12px 35px rgba(155, 89, 182, 0.7),
                         inset 0 4px 0 rgba(255, 255, 255, 0.4),
                         inset 0 -4px 0 rgba(0, 0, 0, 0.2);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
                          0 0 0 rgba(255, 255, 255, 0.8),
                          0 0 10px rgba(255, 255, 255, 0.5);
+            transition: transform 1.5s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.2s, background-color 0.2s, text-shadow 0.2s;
         }
 
         .service-link:active {
@@ -184,6 +185,11 @@
                         inset 0 -2px 0 rgba(0, 0, 0, 0.3);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
                          0 0 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .service-link {
+            /* When not hovered, return to normal size over 1s */
+            transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.2s, background-color 0.2s, text-shadow 0.2s;
         }
 
         .admin-card {

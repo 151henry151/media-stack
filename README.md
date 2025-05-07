@@ -14,6 +14,7 @@ This stack includes:
 - **Jellyseerr:** To manage media requests
 - **Jellyfin:** Open-source media streamer
 - **Recommendarr:** For AI-powered movie and show recommendations
+- **Ampache:** Web-based music server. See `ampache/docker-compose.yml` for setup. Music is served from `/mnt/media-storage/music` and the web UI is reverse proxied at `https://ampache.romptele.com` via nginx. See below for nginx config syncing.
 
 ## Requirements
 
@@ -350,6 +351,51 @@ location / {
 
 - Restart containers
 
+## Ampache Nginx reverse proxy
+
+- Add base URL, Admin Dashboard -> Networking -> Base URL (/ampache)
+- Add below config in Ngix config
+
+```
+location /ampache {
+    return 302 $scheme://$host/ampache/;
+}
+
+location /ampache/ {
+    proxy_pass http://ampache:8080/ampache/;
+
+    proxy_pass_request_headers on;
+
+    proxy_set_header Host $host;
+
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $http_host;
+
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
+
+    # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+    proxy_buffering off;
+}
+```
+
+## Nginx Config Management and Syncing
+
+All nginx configs for media-stack services (including Ampache) are maintained in the `webserver/nginx/conf.d/` directory for version control. After updating or adding a config, sync it to the live nginx config directory with:
+
+```bash
+ln -sf /home/henry/webserver/nginx/conf.d/*.conf /etc/nginx/conf.d/
+```
+
+This ensures the live nginx always uses the latest version-controlled configs. After syncing, reload nginx:
+
+```bash
+systemctl reload nginx
+```
+
+The config for Ampache is `ampache.romptele.com.conf` and is managed the same way as other services.
 
 ## Disclaimer  
 
@@ -357,3 +403,36 @@ location / {
 > Such activities are **illegal** under international laws.  
 >
 > This project is intended for **educational purposes only**.  
+
+### Ampache (Web-based Music Server)
+
+**Current Setup (host-based, not Docker):**
+- **Location:** `/var/www/ampache`
+- **Web Root:** `/var/www/ampache/public`
+- **User/Permissions:** Owned by `www-data:www-data`
+- **Configuration:**  
+  - Main config template: `/var/www/ampache/config/ampache.cfg.php.dist`
+  - (If you completed setup, you may have a `ampache.cfg.php` file here as well.)
+- **Web Server:**  
+  - Served via nginx, config at `/etc/nginx/conf.d/ampache.romptele.com.conf`
+  - Reverse-proxied at `https://ampache.romptele.com`
+  - Uses PHP-FPM (`fastcgi_pass unix:/run/php/php8.2-fpm.sock;`)
+  - SSL via Let's Encrypt (`/etc/letsencrypt/live/ampache.romptele.com/`)
+- **Music Directory:**  
+  - Music is served from `/mnt/media-storage/music`
+- **Install Method:**  
+  - Cloned or extracted directly to `/var/www/ampache`
+  - Not installed via package manager or Docker
+- **To update or configure:**  
+  - Edit files in `/var/www/ampache/config/`
+  - Update nginx config as needed for domain/SSL
+
+**Alternative (Docker, not currently used):**
+- A Docker Compose-based setup was attempted and is referenced in historical bash history.
+- This method was abandoned due to several issues:
+  - Persistent storage and configuration files were not reliably retained between container restarts.
+  - Permissions problems with the config directory (`ampache/config/ampache.cfg.php`) made it difficult for the container to read/write its configuration.
+  - Database connectivity was unreliable, with the container sometimes failing to connect to the database service.
+  - Troubleshooting these issues proved more time-consuming than a direct host install.
+- As a result, Ampache was installed directly on the host system for greater reliability and easier management.
+- In the future, a setup script could automate either installation method.
