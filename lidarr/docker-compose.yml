@@ -11,6 +11,7 @@ services:
       - ../../config/lidarr:/config
       - /mnt/media-storage/music:/music
       - /mnt/media-storage/downloads:/downloads
+      - /mnt/media-storage/downloads:/media/downloads
     ports:
       - 8686:8686
     restart: unless-stopped

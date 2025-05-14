@@ -1,150 +1,5 @@
 name: media-stack
 services:
-
-  authentik-redis:
-    profiles: ["no-vpn"]
-    image: redis:7-alpine
-    command: redis-server --save 60 1 --loglevel warning
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    volumes:
-      - authentik-redis:/data
-    networks:
-      - mynetwork
-
-  authentik-postgresql:
-    profiles: ["no-vpn"]
-    image: postgres:15-alpine
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d authentik -U authentik"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    environment:
-      POSTGRES_DB: authentik
-      POSTGRES_USER: authentik
-      POSTGRES_PASSWORD: authentik-pass
-    volumes:
-      - authentik-postgresql:/var/lib/postgresql/data
-    networks:
-      - mynetwork
-
-  authentik:
-    profiles: ["no-vpn"]
-    image: ghcr.io/goauthentik/server:2023.10.7
-    restart: unless-stopped
-    command: ["server", "--bind", "0.0.0.0:9000"]
-    ports:
-      - "9000:9000"
-    environment:
-      AUTHENTIK_REDIS__HOST: authentik-redis
-      AUTHENTIK_REDIS__DB: 1
-      AUTHENTIK_POSTGRESQL__HOST: authentik-postgresql
-      AUTHENTIK_POSTGRESQL__USER: authentik
-      AUTHENTIK_POSTGRESQL__NAME: authentik
-      AUTHENTIK_POSTGRESQL__PASSWORD: authentik-pass
-      AUTHENTIK_DATABASE: postgres://authentik:authentik-pass@authentik-postgresql:5432/authentik
-      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:-"$(openssl rand -base64 32)"}
-      AUTHENTIK_ERROR_REPORTING__ENABLED: "false"
-      AUTHENTIK_LOG_LEVEL: debug
-      AUTHENTIK_DISABLE_STARTUP_ANALYTICS: "true"
-      AUTHENTIK_DEFAULT_URL: https://authentik.romptele.com
-      AUTHENTIK_PROXY__TRUSTED_PROXIES__0: "0.0.0.0/0"
-      AUTHENTIK_PROXY__TRUSTED_PROXIES__1: "::/0"
-      AUTHENTIK_EMAIL__HOST: ${AUTHENTIK_EMAIL__HOST:-"smtp.gmail.com"}
-      AUTHENTIK_EMAIL__PORT: ${AUTHENTIK_EMAIL__PORT:-"587"}
-      AUTHENTIK_EMAIL__USERNAME: ${AUTHENTIK_EMAIL__USERNAME:-""}
-      AUTHENTIK_EMAIL__PASSWORD: ${AUTHENTIK_EMAIL__PASSWORD:-""}
-      AUTHENTIK_EMAIL__USE_TLS: "true"
-      AUTHENTIK_EMAIL__FROM: ${AUTHENTIK_EMAIL__FROM:-"authentik@romptele.com"}
-      AUTHENTIK_BOOTSTRAP_PASSWORD: ${AUTHENTIK_BOOTSTRAP_PASSWORD:-"$(openssl rand -base64 32)"}
-      AUTHENTIK_TEMPLATES__DIR: /custom-templates
-    user: "1000:1000"
-    volumes:
-      - authentik-media:/media
-      - authentik-custom-templates:/templates
-      - authentik-geoip:/geoip
-      - authentik-certs:/certs
-      - ./authentik/custom-templates:/custom-templates
-    networks:
-      - mynetwork
-    depends_on:
-      authentik-postgresql:
-        condition: service_healthy
-      authentik-redis:
-        condition: service_healthy
-
-  authentik-worker:
-    profiles: ["no-vpn"]
-    image: ghcr.io/goauthentik/server:2023.10.7
-    restart: unless-stopped
-    command: ["worker"]
-    environment:
-      AUTHENTIK_REDIS__HOST: authentik-redis
-      AUTHENTIK_REDIS__DB: 1
-      AUTHENTIK_POSTGRESQL__HOST: authentik-postgresql
-      AUTHENTIK_POSTGRESQL__USER: authentik
-      AUTHENTIK_POSTGRESQL__NAME: authentik
-      AUTHENTIK_POSTGRESQL__PASSWORD: authentik-pass
-      AUTHENTIK_DATABASE: postgres://authentik:authentik-pass@authentik-postgresql:5432/authentik
-      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:-"$(openssl rand -base64 32)"}
-      AUTHENTIK_ERROR_REPORTING__ENABLED: "false"
-      AUTHENTIK_LOG_LEVEL: debug
-      AUTHENTIK_DISABLE_STARTUP_ANALYTICS: "true"
-      AUTHENTIK_DEFAULT_URL: https://authentik.romptele.com
-      AUTHENTIK_PROXY__TRUSTED_PROXIES__0: "0.0.0.0/0"
-      AUTHENTIK_PROXY__TRUSTED_PROXIES__1: "::/0"
-      AUTHENTIK_EMAIL__HOST: ${AUTHENTIK_EMAIL__HOST:-"smtp.gmail.com"}
-      AUTHENTIK_EMAIL__PORT: ${AUTHENTIK_EMAIL__PORT:-"587"}
-      AUTHENTIK_EMAIL__USERNAME: ${AUTHENTIK_EMAIL__USERNAME:-""}
-      AUTHENTIK_EMAIL__PASSWORD: ${AUTHENTIK_EMAIL__PASSWORD:-""}
-      AUTHENTIK_EMAIL__USE_TLS: "true"
-      AUTHENTIK_EMAIL__FROM: ${AUTHENTIK_EMAIL__FROM:-"authentik@romptele.com"}
-      AUTHENTIK_BOOTSTRAP_PASSWORD: ${AUTHENTIK_BOOTSTRAP_PASSWORD:-"$(openssl rand -base64 32)"}
-    user: "1000:1000"
-    volumes:
-      - authentik-media:/media
-      - authentik-custom-templates:/templates
-      - authentik-geoip:/geoip
-      - authentik-certs:/certs
-    networks:
-      - mynetwork
-    depends_on:
-      authentik-postgresql:
-        condition: service_healthy
-      authentik-redis:
-        condition: service_healthy
-
-  ldap:
-    profiles: ["no-vpn"]
-    image: osixia/openldap:1.5.0
-    container_name: ldap
-    hostname: ldap.romptele.com
-    command: --copy-service --loglevel debug
-    environment:
-      LDAP_ORGANISATION: "romptele"
-      LDAP_DOMAIN: "romptele.com"
-      LDAP_BASE_DN: "dc=romptele,dc=com"
-      LDAP_ADMIN_PASSWORD: "adminpassword123"
-      LDAP_CONFIG_PASSWORD: "configpassword123"
-      LDAP_READONLY_USER: "false"
-      LDAP_TLS: "false"
-      LDAP_TLS_VERIFY_CLIENT: "never"
-    volumes:
-      - ./ldap/data:/var/lib/ldap
-      - ./ldap/config:/etc/ldap/slapd.d
-    ports:
-      - "389:389"
-      - "636:636"
-    networks:
-      - mynetwork
-    restart: unless-stopped
-
   # To use/enable VPN, Run this compose file with --profile=vpn. Its highly recommended to use VPN.
   vpn:
     ## Read https://github.com/qdm12/gluetun-wiki/tree/main/setup/providers for details on configuring VPN for your service provider.
@@ -177,10 +32,6 @@ services:
       # - WIREGUARD_PRIVATE_KEY=wOEI9rqqbDwnN8/Bpp22sVz48T71vJ4fYmFWujulwUU=    # Replace with your wg client private key
       # - WIREGUARD_PRESHARED_KEY=xOEI9rqqbDwnN8/Bpp22sVz48T71vJ4fYmFWujulwUU=  # Replaced with your wg pre-shared key
       # - WIREGUARD_ADDRESSES="10.64.222.21/32"                                 # Replace with wg address
-
-    ## Enable volume if VPN_SERVICE_PROVIDER=custom and VPN_TYPE=openvpn is used
-    # volumes:
-      # - /yourpath/yourconfig.conf:/gluetun/config.conf:ro
 
     networks:
       - mynetwork
@@ -358,41 +209,8 @@ services:
       - 7359:7359/udp
       - 8920:8920
     restart: unless-stopped
-  
-  
-  # Doc: https://github.com/navilg/cleanmyarr
-  # cleanmyarr:
-  #   profiles: ["vpn", "no-vpn"]
-  #   depends_on:
-  #     - radarr
-  #     - sonarr
-  #   image: linuxshots/cleanmyarr:0.8.1
-  #   container_name: cleanmyarr
-  #   networks:
-  #     - mynetwork
-  #   volumes:
-  #     - cleanmyarr-config:/config
-    # restart: unless-stopped
-    # environment:
-    # - CMA_MAINTENANCE_CYCLE=${CMA_MAINTENANCE_CYCLE:-""}
-    # - CMA_DELETE_AFTER_DAYS=${CMA_DELETE_AFTER_DAYS:-""}
-    # - CMA_ENABLE_EMAIL_NOTIFICATION=${CMA_ENABLE_EMAIL_NOTIFICATION:-""}
-    # - CMA_SMTP_USERNAME=${CMA_SMTP_USERNAME:-""}
-    # - CMA_SMTP_ENCODED_PASSWORD=${CMA_SMTP_ENCODED_PASSWORD:-""}
-    # - CMA_SMTP_TO_EMAILS=${CMA_SMTP_TO_EMAILS:-""}
-    # - CMA_ENABLE_GOTIFY_NOTIFICATION=${CMA_ENABLE_GOTIFY_NOTIFICATION:-""}
-    # - CMA_GOTIFY_URL=${CMA_GOTIFY_URL:-""}
-    # - CMA_GOTIFY_ENCODED_APP_TOKEN=${CMA_GOTIFY_ENCODED_APP_TOKEN:-""}
-    # - CMA_ENABLE_TELEGRAM_NOTIFICATION=${CMA_ENABLE_TELEGRAM_NOTIFICATION:-""}
-    # - CMA_TELEGRAM_ENCODED_BOT_TOKEN=${CMA_TELEGRAM_ENCODED_BOT_TOKEN:-""}
-    # - CMA_TELEGRAM_CHAT_ID=${CMA_TELEGRAM_CHAT_ID:-""}
-    # - CMA_MONITOR_RADARR=${CMA_MONITOR_RADARR:-""}
-    # - CMA_RADARR_URL=${CMA_RADARR_URL:-""}
-    # - CMA_RADARR_ENCODED_API_KEY=${CMA_RADARR_ENCODED_API_KEY:-""}
-    # - CMA_RADARR_ENABLE_NOTIFICATION=${CMA_RADARR_ENABLE_NOTIFICATION:-""}
 
 volumes:
-  # torrent-downloads:  # This volume is no longer needed
   radarr-config:
   sonarr-config:
   prowlarr-config:
@@ -400,13 +218,6 @@ volumes:
   qbittorrent-config:
   jellyseerr-config:
   recommendarr-data:
-  authentik-redis:
-  authentik-postgresql:
-  authentik-media:
-  authentik-custom-templates:
-  authentik-geoip:
-  authentik-certs:
-  # cleanmyarr-config:
 
 networks:
   mynetwork:
