@@ -377,17 +377,43 @@ async def lidarr_add_album(album_id: str) -> bool:
 
 
 # --- qBittorrent ---
-def add_magnet_to_qbit(magnet: str) -> None:
+def _qbit_client() -> qbittorrentapi.Client:
     host, _, port = QBIT_HOST.partition(":")
     port = int(port) if port else 5080
-    client = qbittorrentapi.Client(
+    return qbittorrentapi.Client(
         host=host or "localhost",
         port=port,
         username=QBIT_USER,
         password=QBIT_PASS,
     )
+
+
+def add_magnet_to_qbit(magnet: str) -> None:
+    client = _qbit_client()
     client.auth_log_in()
     client.torrents_add(urls=magnet, category=CATEGORY)
+
+
+def get_qbit_torrent_hashes() -> set[str]:
+    """Return set of info hashes (lowercase) for torrents currently in qBittorrent."""
+    try:
+        client = _qbit_client()
+        client.auth_log_in()
+        torrents = client.torrents_info()
+        return {str(t.hash).lower() for t in torrents if getattr(t, "hash", None)}
+    except Exception:
+        return set()
+
+
+def _hash_from_magnet(magnet: str) -> str | None:
+    """Extract info hash (lowercase) from magnet link."""
+    if not magnet or "btih:" not in magnet:
+        return None
+    try:
+        ih = magnet.split("btih:")[1].split("&")[0].split("?")[0].strip()[:40]
+        return ih.lower() if ih else None
+    except Exception:
+        return None
 
 
 # --- App ---
@@ -466,28 +492,34 @@ async def search_tpb(q: str, _: tuple = Depends(get_auth_header)):
         raise HTTPException(status_code=400, detail="Query required")
     try:
         results = await search_all_trackers(q.strip())
-    except Exception as e:
+    except Exception:
         import logging
         logging.getLogger(__name__).exception("search_all_trackers failed")
         raise HTTPException(status_code=500, detail="Search failed—try again later")
+    # Fetch qBittorrent hashes in thread (sync API)
+    try:
+        existing_hashes = await asyncio.to_thread(get_qbit_torrent_hashes)
+    except Exception:
+        existing_hashes = set()
     out = []
     for r in results:
         name = r.get("name", "Unknown")
         seeders = int(r.get("seeders", 0) or 0)
         leechers = int(r.get("leechers", 0) or 0)
         size = int(r.get("size", 0) or 0)
-        added = r.get("added", 0)
         magnet = r.get("magnet") or ""
         if not magnet:
             info_hash = r.get("info_hash") or r.get("info hash", "")
             if info_hash:
                 magnet = info_hash_to_magnet(info_hash, name)
+        ih = _hash_from_magnet(magnet)
+        already_added = ih in existing_hashes if ih else False
         out.append({
             "name": name,
             "seeders": seeders,
             "leechers": leechers,
             "size": size,
-            "added": added,
+            "added": already_added,
             "magnet": magnet,
         })
     return {"results": out}

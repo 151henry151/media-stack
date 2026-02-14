@@ -38,6 +38,7 @@
     .torrent-row .name { font-weight: 500; }
     .torrent-row .meta { font-size: 0.8rem; color: #888; }
     .torrent-row button { padding: 0.4rem 0.8rem; font-size: 0.85rem; }
+    .torrent-row button.added { background: #444; color: #888; cursor: default; }
     #login-form { max-width: 320px; }
     .choice-btns { display: flex; gap: 0.5rem; margin: 0.5rem 0; }
     .choice-btns button { flex: 1; }
@@ -98,6 +99,7 @@
       <div id="batch-tpb-flow" class="hidden">
         <div class="step" style="margin-top: 1rem;">4. Pick torrent for each album</div>
         <p class="meta" style="margin-top: 0.25rem; font-size: 0.85rem;">Verify the torrent matches the album—search results sometimes include false matches.</p>
+        <p id="batch-loading" class="hidden meta" style="margin-bottom: 1rem;"></p>
         <div id="batch-tpb-results"></div>
       </div>
 
@@ -135,6 +137,24 @@
       return fetch(url, { ...opts, headers: { 'Content-Type': 'application/json', ...authHeader(), ...opts.headers } });
     }
     function show(el, show) { el.classList.toggle('hidden', !show); }
+    const SEARCHING_MESSAGES = [
+      'Searching the internet for your music…',
+      'Hang on, this might take a moment…',
+      'Digging through the archives…',
+      'Consulting the torrent oracles…',
+      'Scouring trackers far and wide…',
+      'Please be patient—this may take a minute or two…'
+    ];
+    function startLoadingMessages(el) {
+      if (!el) return () => {};
+      let i = 0;
+      el.textContent = SEARCHING_MESSAGES[0];
+      const id = setInterval(() => {
+        i = (i + 1) % SEARCHING_MESSAGES.length;
+        el.textContent = SEARCHING_MESSAGES[i];
+      }, 2500);
+      return () => clearInterval(id);
+    }
     function err(el, msg) { el.textContent = msg || ''; show(el, !!msg); }
     function escapeHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
     function fmtSize(n) {
@@ -152,8 +172,14 @@
         const row = document.createElement('div');
         row.className = 'torrent-row';
         const mag = t.magnet;
-        row.innerHTML = '<div><div class="name">' + escapeHtml(t.name) + '</div><div class="meta"><span>' + t.seeders + ' seeders</span><span>' + t.leechers + ' leechers</span><span class="size">' + fmtSize(t.size) + '</span></div></div><button>Add</button>';
-        row.querySelector('button').onclick = () => addMagnet(mag);
+        const alreadyAdded = !!t.added;
+        const btn = document.createElement('button');
+        btn.textContent = alreadyAdded ? 'Added' : 'Add';
+        if (alreadyAdded) btn.className = 'added';
+        if (!alreadyAdded) btn.onclick = (e) => addMagnet(mag, e.target);
+        if (alreadyAdded) btn.disabled = true;
+        row.innerHTML = '<div><div class="name">' + escapeHtml(t.name) + '</div><div class="meta"><span>' + t.seeders + ' seeders</span><span>' + t.leechers + ' leechers</span><span class="size">' + fmtSize(t.size) + '</span></div></div>';
+        row.appendChild(btn);
         containerEl.appendChild(row);
       }
       if (seeded.length === 0 && unseeded.length === 0) {
@@ -184,8 +210,14 @@
           const row = document.createElement('div');
           row.className = 'torrent-row';
           const mag = t.magnet;
-          row.innerHTML = '<div><div class="name">' + escapeHtml(t.name) + '</div><div class="meta"><span>' + t.seeders + ' seeders</span><span>' + t.leechers + ' leechers</span><span class="size">' + fmtSize(t.size) + '</span></div></div><button>Add</button>';
-          row.querySelector('button').onclick = () => addMagnet(mag);
+          const alreadyAdded = !!t.added;
+          const btn = document.createElement('button');
+          btn.textContent = alreadyAdded ? 'Added' : 'Add';
+          if (alreadyAdded) btn.className = 'added';
+          if (!alreadyAdded) btn.onclick = (e) => addMagnet(mag, e.target);
+          if (alreadyAdded) btn.disabled = true;
+          row.innerHTML = '<div><div class="name">' + escapeHtml(t.name) + '</div><div class="meta"><span>' + t.seeders + ' seeders</span><span>' + t.leechers + ' leechers</span><span class="size">' + fmtSize(t.size) + '</span></div></div>';
+          row.appendChild(btn);
           zeroList.appendChild(row);
         });
         const btn = document.createElement('button');
@@ -342,7 +374,10 @@
       show(document.getElementById('album-tpb-flow'), false);
       show(document.getElementById('batch-tpb-flow'), true);
       const container = document.getElementById('batch-tpb-results');
+      const batchLoadEl = document.getElementById('batch-loading');
       container.innerHTML = '';
+      show(batchLoadEl, true);
+      const stopMessages = startLoadingMessages(batchLoadEl);
       for (const album of albums) {
         const section = document.createElement('div');
         section.className = 'batch-album-section';
@@ -356,6 +391,8 @@
         return { album, results, sectionIdx: i };
       });
       const settled = await Promise.all(promises);
+      stopMessages();
+      show(batchLoadEl, false);
       for (const { album, results, sectionIdx } of settled) {
         const section = container.children[sectionIdx];
         section.innerHTML = '<h4>' + escapeHtml(album.title + (album.date ? ' (' + album.date + ')' : '')) + '</h4>';
@@ -374,6 +411,7 @@
       const loadEl = document.getElementById('discography-loading');
       resEl.innerHTML = '';
       show(loadEl, true);
+      const stopMessages = startLoadingMessages(loadEl);
       try {
         const q = currentArtist.name + ' Discography';
         const r = await api('/api/search-tpb?q=' + encodeURIComponent(q));
@@ -382,10 +420,12 @@
           throw new Error(err.detail || 'Search failed (' + r.status + ')');
         }
         const { results } = await r.json();
+        stopMessages();
         show(loadEl, false);
         if (!results.length) { resEl.innerHTML = '<p>No discography torrents found.</p>'; return; }
         renderTorrentResults(results, resEl, 'No discography torrents found.', null);
       } catch (e) {
+        stopMessages();
         show(loadEl, false);
         resEl.innerHTML = '<p class="error">' + (e.message || 'Search failed') + '</p>';
       }
@@ -401,6 +441,7 @@
       const loadEl = document.getElementById('album-tpb-loading');
       resEl.innerHTML = '';
       show(loadEl, true);
+      const stopMessages = startLoadingMessages(loadEl);
       try {
         const q = currentArtist.name + ' ' + albumTitle;
         const r = await api('/api/search-tpb?q=' + encodeURIComponent(q));
@@ -409,9 +450,11 @@
           throw new Error(err.detail || 'Search failed (' + r.status + ')');
         }
         const { results } = await r.json();
+        stopMessages();
         show(loadEl, false);
         renderTorrentResults(results, resEl, 'No torrents found.', albumInfo);
       } catch (e) {
+        stopMessages();
         show(loadEl, false);
         resEl.innerHTML = '<p class="error">' + (e.message || 'Search failed') + '</p>';
       }
@@ -434,10 +477,16 @@
       }
     }
 
-    async function addMagnet(magnet) {
+    async function addMagnet(magnet, btnEl) {
       try {
         const r = await api('/api/add-torrent', { method: 'POST', body: JSON.stringify({ magnet }) });
         if (!r.ok) throw new Error('Failed to add');
+        if (btnEl) {
+          btnEl.textContent = 'Added';
+          btnEl.className = 'added';
+          btnEl.disabled = true;
+          btnEl.onclick = null;
+        }
         alert('Torrent added! It will be imported automatically when the download completes. Note: depending on availability of seeders, this may take anywhere from several hours to several days before the music appears on the server.');
       } catch (e) {
         alert('Error: ' + (e.message || 'Failed to add torrent'));
