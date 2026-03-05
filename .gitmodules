@@ -1,0 +1,3 @@
+[submodule "music-requests"]
+	path = music-requests
+	url = https://github.com/151henry151/music-requests.git
