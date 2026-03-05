@@ -185,9 +185,53 @@ services:
       - 5055:5055
     restart: unless-stopped
 
+  music-requests:
+    profiles: ["vpn", "no-vpn"]
+    build: ./music-requests
+    container_name: music-requests
+    networks:
+      - mynetwork
+    environment:
+      - AIRSONIC_URL=http://airsonic-advanced:4040
+      - QBIT_HOST=qbittorrent:5080
+      - QBIT_USER=${QBIT_USER:-admin}
+      - QBIT_PASS=${QBIT_PASS:-admin123}
+      - QBIT_CATEGORY=lidarr
+      - PROWLARR_URL=http://prowlarr:9696
+      - PROWLARR_API_KEY=${PROWLARR_API_KEY:-}
+      - LIDARR_URL=http://lidarr:8686
+      - LIDARR_API_KEY=${LIDARR_API_KEY:-}
+      - YT_IMPORT_DIR=/music
+      - TRIGGER_AIRSONIC_SCAN=true
+    volumes:
+      - /mnt/media-storage/music:/music
+    ports:
+      - 8001:8000
+    restart: unless-stopped
+
+  airsonic-advanced:
+    profiles: ["vpn", "no-vpn"]
+    container_name: airsonic-advanced
+    image: lscr.io/linuxserver/airsonic-advanced:latest
+    networks:
+      - mynetwork
+    environment:
+      - PUID=0
+      - PGID=1307
+      - TZ=UTC
+      - JAVA_OPTS=-Dserver.use-forward-headers=true
+    volumes:
+      - airsonic-advanced-config:/config
+      - /mnt/media-storage/music:/music
+      - /mnt/media-storage/playlists:/playlists
+      - /mnt/media-storage/podcasts:/podcasts
+    ports:
+      - 4040:4040
+    restart: unless-stopped
+
   jellyfin:
     profiles: ["vpn", "no-vpn"]
-    image: linuxserver/jellyfin:10.10.6
+    image: linuxserver/jellyfin:10.11.2
     container_name: jellyfin
     networks:
       - mynetwork
@@ -202,7 +246,7 @@ services:
       - jellyfin-config:/config
       - /mnt/media-storage/downloads:/data
       - /mnt/media-storage:/media
-      - /mnt/media-storage/transcodes:/transcode
+      - /var/lib/jellyfin/transcodes:/transcode
       - /root/media-stack/jellyfin-custom:/custom
     ports:
       - 8096:8096
@@ -211,6 +255,7 @@ services:
     restart: unless-stopped
 
 volumes:
+  airsonic-advanced-config:
   radarr-config:
   sonarr-config:
   prowlarr-config:
