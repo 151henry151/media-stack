@@ -1,0 +1,8 @@
+# Nightly media compression - runs at 3 AM; script loops until 7 AM or no more files
+# Single conversion at a time; in-progress runs to completion past 7 AM
+# Install: sudo cp /home/henry/webserver/media-stack/compress-media-nightly-cron /etc/cron.d/compress-media-nightly
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 3 * * * root /home/henry/webserver/media-stack/compress-media-nightly.sh

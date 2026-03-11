@@ -1,0 +1,8 @@
+# Airsonic watchdog - check every 5 min, restart if down/502
+# Cooldown 6 min after restart to allow ~5 min startup
+# Install: sudo cp /home/henry/webserver/media-stack/airsonic-watchdog-cron /etc/cron.d/airsonic-watchdog
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+*/5 * * * * root /home/henry/webserver/media-stack/airsonic-watchdog.sh

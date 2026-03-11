@@ -1,0 +1,17 @@
+[Unit]
+Description=Media Requests app (requests.romptele.com)
+After=network.target
+
+[Service]
+Type=simple
+User=henry
+Group=henry
+WorkingDirectory=/home/henry/webserver/media-stack/media-requests
+EnvironmentFile=-/home/henry/webserver/media-stack/media-requests/.env
+Environment=PORT=8002
+ExecStart=/home/henry/webserver/media-stack/media-requests/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8002
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

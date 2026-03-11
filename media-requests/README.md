@@ -19,10 +19,20 @@ export MEDIA_REQUESTS_JWT_SECRET="your-secret"
 export QBIT_HOST="localhost:5080"   # or qbittorrent:5080 if qBittorrent is in Docker on same host
 export QBIT_USER=admin
 export QBIT_PASS=your-qbit-password
-uvicorn main:app --host 0.0.0.0 --port 8002
+./run.sh
+# Or: uvicorn main:app --host 127.0.0.1 --port 8002
 ```
 
-Then open http://localhost:8002 (or use nginx to proxy `requests.romptele.com` to port 8002).
+For production, a systemd unit is provided:
+
+```bash
+# Install and start (unit file in repo)
+sudo cp /home/henry/webserver/media-stack/media-requests/media-requests.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now media-requests
+```
+
+Ensure `/home/henry/webserver/media-stack/media-requests/.env` exists with `MEDIA_REQUESTS_JWT_SECRET=...` (see `.env.example`). Nginx proxies `requests.romptele.com` to port 8002.
 
 ## Run with Docker
 

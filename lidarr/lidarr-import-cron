@@ -1,0 +1,7 @@
+# Lidarr torrent import - process completed lidarr-category torrents every 15 min
+# Install: sudo cp /home/henry/webserver/media-stack/lidarr/lidarr-import-cron /etc/cron.d/lidarr-torrent-import
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+*/15 * * * * root /home/henry/webserver/media-stack/lidarr/lidarr-torrent-import.sh

@@ -25,6 +25,10 @@ try:
     import qbittorrentapi
 except ImportError:
     qbittorrentapi = None  # type: ignore
+try:
+    import bcrypt
+except ImportError:
+    bcrypt = None  # type: ignore
 
 # --- Config ---
 BASE_DIR = Path(__file__).resolve().parent
@@ -134,6 +138,8 @@ def _get_user_by_username(username: str) -> tuple[int, str] | None:
 
 
 def _verify_password(plain: str, hashed: str) -> bool:
+    if hashed.startswith("$2b$") and bcrypt is not None:
+        return bcrypt.checkpw(plain.encode("utf-8"), hashed.encode("utf-8"))
     return pwd_ctx.verify(plain, hashed)
 
 
@@ -169,6 +175,18 @@ def _is_video_name(name: str) -> bool:
     return any(kw in n for kw in ("1080p", "720p", "2160p", "4k", "bluray", "web-dl", "remux", "x264", "x265", "hevc"))
 
 
+def _has_english_audio(name: str) -> bool:
+    """Return True if the torrent name suggests English audio (so we avoid sub-only or non-English releases)."""
+    n = (name or "").lower()
+    if "english" in n or " eng " in n or " eng." in n or ".eng " in n or "[eng]" in n or "(eng)" in n:
+        return True
+    if "dual audio" in n or "dual.audio" in n or "dual-audio" in n:
+        return True
+    if "dubbed" in n or " english dub" in n or " eng dub" in n or " dub " in n:
+        return True
+    return False
+
+
 def _pick_movie(torrents: list[dict]) -> dict | None:
     prefer_max = int(PREFER_MOVIE_MAX_GB * 1024**3)
     candidates = []
@@ -182,7 +200,10 @@ def _pick_movie(torrents: list[dict]) -> dict | None:
         name = (t.get("name") or "").strip()
         if not _is_video_name(name):
             continue
+        # For movies (cat 207) we don't require "English" in the name; most movie torrents are unmarked.
         score = seeders
+        if _has_english_audio(name):
+            score += 10
         if "720" in name or "720p" in name.lower():
             score += 30
         if seeders >= PREFER_SEEDERS:
@@ -207,7 +228,7 @@ def _pick_tv(torrents: list[dict]) -> dict | None:
         if seeders < MIN_SEEDERS:
             continue
         name = (t.get("name") or "").strip().lower()
-        if not _is_video_name(name):
+        if not _is_video_name(name) or not _has_english_audio(name):
             continue
         is_full_season = "season" in name or "s01" in name or "s1 " in name or " complete " in name
         candidates.append((size, -seeders, 0 if is_full_season else 1, t))  # full season first, then size, then seeders
@@ -323,6 +344,9 @@ REJECT_PATTERNS = re.compile(r"\b(no|nope|wrong|different|other|cancel)\b", re.I
 
 def _normalize_query(msg: str) -> str:
     msg = msg.strip()
+    # Strip surrounding quotes so "Add 'free willy'" -> free willy
+    if len(msg) >= 2 and (msg[0], msg[-1]) in (("'", "'"), ('"', '"')):
+        msg = msg[1:-1].strip()
     for prefix in ("add ", "i want ", "want ", "get ", "find ", "search ", "movie ", "show ", "tv "):
         if msg.lower().startswith(prefix):
             msg = msg[len(prefix):].strip()
@@ -349,7 +373,7 @@ async def chat(req: ChatRequest, user: dict = Depends(get_current_user)):
             _pending.pop(user_id, None)
             return {"reply": "Something went wrong building the magnet link. Try again."}
         try:
-            _add_to_qbit(magnet, "sonarr" if kind == "tv" else "radarr")
+            _add_to_qbit(magnet, "tv-sonarr" if kind == "tv" else "radarr")
         except Exception as e:
             return {"reply": f"Failed to add to download manager: {e}"}
         _pending.pop(user_id, None)

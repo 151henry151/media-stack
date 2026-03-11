@@ -1,0 +1,8 @@
+# Remove qBittorrent errored/missing-files torrents (and their data) once daily.
+# Frees pre-allocated space from broken torrents.
+# Install: sudo cp /home/henry/webserver/media-stack/qbit-remove-errored-cron /etc/cron.d/qbit-remove-errored
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 2 * * * root /home/henry/webserver/media-stack/qbit-remove-errored-torrents.sh >> /var/log/qbit-remove-errored.log 2>&1

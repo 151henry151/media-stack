@@ -1,0 +1,11 @@
+# Beets import - 4x daily + on-new-album trigger every 10 min
+# Install: sudo cp /home/henry/webserver/media-stack/beets/beets-cron /etc/cron.d/beets-import
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Full import at 3am, 9am, 3pm, 9pm
+0 3,9,15,21 * * * root /home/henry/webserver/media-stack/beets/beets-import.sh
+
+# Check for new albums (Lidarr import or manual add) every 10 min
+*/10 * * * * root /home/henry/webserver/media-stack/beets/beets-import-on-new.sh

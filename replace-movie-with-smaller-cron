@@ -1,0 +1,9 @@
+# Replace largest movie with smaller TPB release once daily (4 AM).
+# Picks largest movie, searches Apibay, downloads via qBittorrent, replaces file, removes torrent.
+# Install: sudo cp /home/henry/webserver/media-stack/replace-movie-with-smaller-cron /etc/cron.d/replace-movie-with-smaller
+# If qBittorrent runs in Docker with /mnt/media-storage/downloads:/downloads, ensure QBIT_SAVE_PATH_REPLACEMENT is set in the environment (e.g. in the script or a wrapper).
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 4 * * * root /home/henry/webserver/media-stack/replace-movie-with-smaller.sh --remove-torrent-after >> /var/log/replace-movie-with-smaller.log 2>&1

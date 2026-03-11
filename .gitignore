@@ -1,3 +1,10 @@
 # Ignore sensitive files
 .credentials
-.env.authentik 
+.env
+.env.authentik
+media-requests/.env
+media-requests/media_requests.db
+
+# Runtime/generated
+*.mdb
+**/ldap/data/

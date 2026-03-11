@@ -203,8 +203,12 @@ services:
       - LIDARR_API_KEY=${LIDARR_API_KEY:-}
       - YT_IMPORT_DIR=/music
       - TRIGGER_AIRSONIC_SCAN=true
+      # Optional: set to container path where cookies file is mounted (fixes "Private video" on public playlists)
+      - YT_DLP_COOKIES_FILE=${YT_DLP_COOKIES_FILE:-}
     volumes:
       - /mnt/media-storage/music:/music
+      # Optional: mount YouTube cookies so playlist import and rips work for age-restricted or YT Music playlists
+      # - /path/on/host/youtube_cookies.txt:/cookies/youtube.txt:ro
     ports:
       - 8001:8000
     restart: unless-stopped
