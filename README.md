@@ -16,6 +16,8 @@ This stack includes:
 - **Recommendarr:** For AI-powered movie and show recommendations
 - **Ampache:** Web-based music server. See `ampache/docker-compose.yml` for setup. Music is served from `/mnt/media-storage/music` and the web UI is reverse proxied at `https://ampache.romptele.com` via nginx. See below for nginx config syncing.
 
+**Reproducing the full server from scratch** (after a disaster or new host): see **[REPRODUCTION.md](REPRODUCTION.md)** for storage layout, Docker, nginx, cron jobs, and the media-requests app.
+
 ## Requirements
 
 - Docker version 28.0.1 or later
