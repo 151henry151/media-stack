@@ -110,7 +110,26 @@ Chat UI for requesting movies/TV via Apibay + qBittorrent.
 
 - Nginx proxies `requests.romptele.com` to `http://127.0.0.1:8002`.
 
-### 5.2 Cron Jobs
+### 5.2 Music-requests-chat app (music-requests.romptele.com)
+
+Chat UI for the music-requests backend: request albums in plain language, paste YouTube/archive.org URLs to rip. Uses the same backend as the original music-requests app (Docker service on port 8001).
+
+- **Location**: `media-stack/music-requests-chat/`
+- **Run**: Use the systemd unit; install and start:
+
+  ```bash
+  cd media-stack/music-requests-chat
+  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+  cp .env.example .env
+  # .env: MUSIC_REQUESTS_BACKEND_URL=http://127.0.0.1:8001 (where music-requests container is exposed)
+  sudo cp music-requests-chat.service /etc/systemd/system/
+  sudo systemctl daemon-reload
+  sudo systemctl enable --now music-requests-chat
+  ```
+
+- Nginx proxies `music-requests.romptele.com` to `http://127.0.0.1:8003`. The **music-requests** Docker service must be running (e.g. port 8001) as the backend API.
+
+### 5.3 Cron Jobs
 
 Install cron files under `/etc/cron.d/` (or equivalent) so the following run as configured:
 
@@ -125,7 +144,7 @@ Install cron files under `/etc/cron.d/` (or equivalent) so the following run as 
 
 Scripts expect to be run from the media-stack repo root (or paths adjusted). Wrappers (e.g. `replace-movie-with-smaller.sh`) use a Python env that has `requests`, `qbittorrent-api`; point `QBIT_PYTHON` at a venv that has those (e.g. `media-requests/.venv/bin/python`).
 
-### 5.3 One-off / Helper Scripts
+### 5.4 One-off / Helper Scripts
 
 - `check-media-storage-usage.sh` – Report disk usage for media directories.
 - `list-download-duplicates.sh` / `remove-download-duplicates.sh` – Find/remove duplicates between `downloads/` and library.
