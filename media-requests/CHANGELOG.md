@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Use qBittorrent category `radarr` for movies and `tv-sonarr` for TV shows so Radarr/Sonarr pick them up correctly.
+- Add delay notice in success message and UI: inform users it may be a day or two before their request appears on the server.
 
 ## [0.1.0] - 2025-03-05
 

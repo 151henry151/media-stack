@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Requests – RompTele</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+      color: #e8e8e8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    .container { width: 100%; max-width: 560px; display: flex; flex-direction: column; flex: 1; min-height: 0; }
+    h1 { font-size: 1.5rem; font-weight: 600; color: #7dd3fc; margin: 0 0 0.25rem 0; }
+    .subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .chat-window {
+      flex: 1; display: flex; flex-direction: column; min-height: 320px;
+      background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(71, 85, 105, 0.4); border-radius: 12px; overflow: hidden;
+    }
+    .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .msg { max-width: 88%; padding: 0.65rem 1rem; border-radius: 12px; font-size: 0.95rem; line-height: 1.45; }
+    .msg.bot { align-self: flex-start; background: #1e293b; border: 1px solid #334155; color: #e2e8f0; }
+    .msg.user { align-self: flex-end; background: #1e3a5f; border: 1px solid #2563eb; color: #e0f2fe; }
+    .msg strong { color: #7dd3fc; }
+    .chat-input-row { display: flex; gap: 0.5rem; padding: 0.75rem 1rem; border-top: 1px solid rgba(71, 85, 105, 0.4); background: rgba(15, 23, 42, 0.5); }
+    .chat-input-row input { flex: 1; padding: 0.6rem 1rem; border: 1px solid #334155; border-radius: 8px; background: #0f172a; color: #f1f5f9; font-size: 1rem; }
+    .chat-input-row input:focus { outline: none; border-color: #3b82f6; }
+    .chat-input-row button { padding: 0.6rem 1.2rem; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+    .chat-input-row button:hover { background: #1d4ed8; }
+    .chat-input-row button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .auth-form input { width: 100%; padding: 0.6rem 0.9rem; margin-bottom: 0.75rem; border: 1px solid #334155; border-radius: 8px; background: #0f172a; color: #f1f5f9; font-size: 1rem; }
+    .auth-form button { width: 100%; padding: 0.65rem; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem; }
+    .error { color: #f87171; font-size: 0.9rem; margin-top: 0.5rem; }
+    .hidden { display: none !important; }
+    .logout { font-size: 0.85rem; color: #94a3b8; background: none; border: none; cursor: pointer; text-decoration: underline; }
+    .logout:hover { color: #f87171; }
+    .attach-artists { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .attach-artists .artist { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.6rem; background: #0f172a; border-radius: 8px; font-size: 0.85rem; }
+    .attach-artists .artist img { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; }
+    .attach-torrents { margin-top: 0.5rem; font-size: 0.85rem; }
+    .attach-torrents li { padding: 0.35rem 0; border-bottom: 1px solid #334155; list-style: none; }
+    .attach-album-img { margin-top: 0.5rem; }
+    .attach-album-img img { max-width: 120px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Requests</h1>
+    <p class="subtitle">Request albums to add to the music library. Say what you want in plain English or paste a YouTube/archive.org URL.</p>
+
+    <div id="auth-section" class="card" style="background: rgba(30,41,59,0.6); border-radius: 12px; padding: 1.5rem;">
+      <div class="step" style="color: #7dd3fc; font-size: 0.85rem; margin-bottom: 0.75rem;">Log in with your Airsonic/Music server credentials</div>
+      <div id="login-form" class="auth-form">
+        <input type="text" id="login-username" placeholder="Username" autocomplete="username">
+        <input type="password" id="login-password" placeholder="Password" autocomplete="current-password">
+        <button type="button" id="btn-login">Log in</button>
+        <p id="login-error" class="error hidden"></p>
+      </div>
+    </div>
+
+    <div id="chat-section" class="hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <span style="color: #94a3b8;">Signed in as <strong id="chat-username"></strong></span>
+        <button type="button" class="logout" id="btn-logout">Log out</button>
+      </div>
+      <div class="chat-window">
+        <div class="chat-messages" id="chat-messages">
+          <div class="msg bot">Ask for an album (e.g. &quot;Add Dark Side of the Moon by Pink Floyd&quot;), search for an artist, or paste a list of artist names (one per line or comma-separated) to add discography for each. You can also paste a YouTube or archive.org URL to rip an album. It may be a day or two before your music appears on the server.</div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Request an album, paste artist list, or paste a URL…" autocomplete="off">
+          <button type="button" id="btn-send">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = '';
+
+    function showAuth() {
+      document.getElementById('auth-section').classList.remove('hidden');
+      document.getElementById('chat-section').classList.add('hidden');
+    }
+    function showChat(username) {
+      document.getElementById('auth-section').classList.add('hidden');
+      document.getElementById('chat-section').classList.remove('hidden');
+      document.getElementById('chat-username').textContent = username || 'You';
+      document.getElementById('chat-input').focus();
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+    function replyToHtml(text) {
+      return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    }
+
+    function addMessage(text, isUser, attachments) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (isUser ? 'user' : 'bot');
+      const body = document.createElement('div');
+      body.innerHTML = isUser ? escapeHtml(text) : replyToHtml(text);
+      wrap.appendChild(body);
+      if (attachments && attachments.length) {
+        attachments.forEach(att => {
+          if (att.type === 'artists' && att.artists && att.artists.length) {
+            const div = document.createElement('div');
+            div.className = 'attach-artists';
+            att.artists.slice(0, 8).forEach(a => {
+              const s = document.createElement('span');
+              s.className = 'artist';
+              if (a.image) {
+                const img = document.createElement('img');
+                img.src = a.image;
+                img.alt = a.name;
+                s.appendChild(img);
+              }
+              s.appendChild(document.createTextNode(a.name));
+              div.appendChild(s);
+            });
+            wrap.appendChild(div);
+          } else if (att.type === 'torrents' && att.torrents && att.torrents.length) {
+            const ul = document.createElement('ul');
+            ul.className = 'attach-torrents';
+            if (att.album_image) {
+              const imgWrap = document.createElement('div');
+              imgWrap.className = 'attach-album-img';
+              const img = document.createElement('img');
+              img.src = att.album_image;
+              img.alt = 'Album';
+              imgWrap.appendChild(img);
+              wrap.appendChild(imgWrap);
+            }
+            att.torrents.forEach((t, i) => {
+              const li = document.createElement('li');
+              li.textContent = (i + 1) + '. ' + (t.name || '').substring(0, 65) + ' — ' + (t.seeders || 0) + ' seeders';
+              ul.appendChild(li);
+            });
+            wrap.appendChild(ul);
+          } else if (att.type === 'album_cover' && att.image) {
+            const div = document.createElement('div');
+            div.className = 'attach-album-img';
+            const img = document.createElement('img');
+            img.src = att.image;
+            img.alt = 'Album';
+            div.appendChild(img);
+            wrap.appendChild(div);
+          }
+        });
+      }
+      document.getElementById('chat-messages').appendChild(wrap);
+      document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+    }
+
+    document.getElementById('btn-login').onclick = async () => {
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value;
+      const errEl = document.getElementById('login-error');
+      errEl.classList.add('hidden');
+      if (!username || !password) { errEl.textContent = 'Username and password required'; errEl.classList.remove('hidden'); return; }
+      try {
+        const r = await fetch(API + '/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username, password }), credentials: 'include' });
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok) { errEl.textContent = data.detail || r.statusText || 'Login failed'; errEl.classList.remove('hidden'); return; }
+        showChat(data.username);
+      } catch (e) {
+        errEl.textContent = e.message || 'Login failed';
+        errEl.classList.remove('hidden');
+      }
+    };
+
+    document.getElementById('btn-logout').onclick = async () => {
+      await fetch(API + '/api/logout', { method: 'POST', credentials: 'include' });
+      showAuth();
+    };
+
+    const inputEl = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('btn-send');
+    function sendMessage() {
+      const msg = inputEl.value.trim();
+      if (!msg) return;
+      inputEl.value = '';
+      addMessage(msg, true);
+      sendBtn.disabled = true;
+      fetch(API + '/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: msg }), credentials: 'include' })
+        .then(r => r.json())
+        .then(data => {
+          addMessage(data.reply || 'Done.', false, data.attachments || []);
+        })
+        .catch(e => addMessage('Error: ' + (e.message || 'Something went wrong'), false))
+        .finally(() => { sendBtn.disabled = false; inputEl.focus(); });
+    }
+    document.getElementById('btn-send').onclick = sendMessage;
+    inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+    fetch(API + '/api/me', { credentials: 'include' })
+      .then(r => { if (r.status === 200) return r.json().then(d => showChat(d.username)); showAuth(); })
+      .catch(() => showAuth());
+  </script>
+</body>
+</html>

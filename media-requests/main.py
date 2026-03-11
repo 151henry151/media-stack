@@ -377,7 +377,7 @@ async def chat(req: ChatRequest, user: dict = Depends(get_current_user)):
         except Exception as e:
             return {"reply": f"Failed to add to download manager: {e}"}
         _pending.pop(user_id, None)
-        return {"reply": "I've added it to the download manager — it should be on the server soon!"}
+        return {"reply": "I've added it to the download manager. It may be a day or two before it appears on the server."}
 
     if pending and REJECT_PATTERNS.search(msg):
         _pending.pop(user_id, None)
