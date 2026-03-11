@@ -5,17 +5,23 @@ Auth: Airsonic credentials; session holds creds and forwards Basic auth to backe
 """
 from __future__ import annotations
 
+import asyncio
 import base64
 import os
 import re
 import uuid
 from pathlib import Path
 
-import httpx
+import requests
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+
+try:
+    import httpx
+except ImportError:  # pragma: no cover - exercised only in minimal environments
+    httpx = None  # type: ignore
 
 BACKEND_URL = os.environ.get("MUSIC_REQUESTS_BACKEND_URL", "http://127.0.0.1:8001").rstrip("/")
 SESSION_COOKIE = "music_chat_session"
@@ -28,13 +34,51 @@ def _auth_headers(username: str, password: str) -> dict[str, str]:
     return {"Authorization": f"Basic {b64}"}
 
 
+async def _http_get(
+    url: str,
+    *,
+    params: dict | None = None,
+    headers: dict[str, str] | None = None,
+    timeout: float = 30.0,
+):
+    if httpx is not None:
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            return await client.get(url, params=params or {}, headers=headers or {})
+    return await asyncio.to_thread(
+        requests.get,
+        url,
+        params=params or {},
+        headers=headers or {},
+        timeout=timeout,
+    )
+
+
+async def _http_post(
+    url: str,
+    *,
+    json_body: dict | None = None,
+    headers: dict[str, str] | None = None,
+    timeout: float = 60.0,
+):
+    if httpx is not None:
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            return await client.post(url, json=json_body or {}, headers=headers or {})
+    return await asyncio.to_thread(
+        requests.post,
+        url,
+        json=json_body or {},
+        headers=headers or {},
+        timeout=timeout,
+    )
+
+
 async def _backend_get(path: str, params: dict | None, username: str, password: str) -> dict | list:
-    async with httpx.AsyncClient(timeout=30.0) as client:
-        r = await client.get(
-            f"{BACKEND_URL}{path}",
-            params=params or {},
-            headers=_auth_headers(username, password),
-        )
+    r = await _http_get(
+        f"{BACKEND_URL}{path}",
+        params=params or {},
+        headers=_auth_headers(username, password),
+        timeout=30.0,
+    )
     if r.status_code == 401:
         raise HTTPException(status_code=401, detail="Session expired; please log in again.")
     r.raise_for_status()
@@ -42,12 +86,12 @@ async def _backend_get(path: str, params: dict | None, username: str, password: 
 
 
 async def _backend_post(path: str, json: dict, username: str, password: str) -> dict:
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        r = await client.post(
-            f"{BACKEND_URL}{path}",
-            json=json,
-            headers=_auth_headers(username, password),
-        )
+    r = await _http_post(
+        f"{BACKEND_URL}{path}",
+        json_body=json,
+        headers=_auth_headers(username, password),
+        timeout=60.0,
+    )
     if r.status_code == 401:
         raise HTTPException(status_code=401, detail="Session expired; please log in again.")
     r.raise_for_status()
@@ -129,11 +173,11 @@ async def index():
 async def login(req: LoginRequest, response: Response):
     # Verify with backend (which pings Airsonic)
     try:
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            r = await client.post(
-                f"{BACKEND_URL}/api/login",
-                json={"username": req.username.strip(), "password": req.password},
-            )
+        r = await _http_post(
+            f"{BACKEND_URL}/api/login",
+            json_body={"username": req.username.strip(), "password": req.password},
+            timeout=15.0,
+        )
     except Exception as e:
         raise HTTPException(status_code=502, detail=f"Could not reach music server: {e}")
     if r.status_code != 200:
