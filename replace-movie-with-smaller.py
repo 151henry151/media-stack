@@ -4,10 +4,11 @@ Replace a high-disk-usage movie with a much smaller version from The Pirate Bay.
 
 1. Picks the largest movie file in the movies library (like compress-media-nightly).
 2. Searches Apibay (TPB) for a smaller release of the same movie.
-3. Adds the chosen torrent to qBittorrent and waits for completion.
-4. With category "radarr" (default): deletes the old library file after the download completes; Radarr
-   imports the new file from the download folder to /mnt/media-storage/movies. Without radarr:
-   moves the new file into the library and optionally removes the torrent.
+3. Deletes the old library file first to free space (avoids disk overflow when disk is low).
+4. Adds the chosen torrent to qBittorrent and waits for completion.
+5. With category "radarr" (default): Radarr imports the new file from the download folder to
+   /mnt/media-storage/movies. Without radarr: moves the new file into the library and optionally
+   removes the torrent.
 
 Usage:
   ./replace-movie-with-smaller.py              # run full flow (pick, search, download, replace)
@@ -398,7 +399,7 @@ def main() -> int:
         log(f"Chosen: {name} ({size_bytes / (1024**3):.2f} GB, {seeders} seeders)")
 
         if dry_run:
-            log("Dry run: would add this torrent, wait for completion, then replace and delete old file.")
+            log("Dry run: would delete old file first, then add torrent, wait for completion, then Radarr imports.")
             if remove_torrent_after:
                 log("Dry run: would remove torrent from qBittorrent after replacement.")
             break
@@ -410,7 +411,13 @@ def main() -> int:
                 log("Invalid info_hash; cannot build magnet.")
                 break
 
-            # 3. Add to qBittorrent (category "radarr" so Radarr will import to movies when done)
+            # Delete old library file first to free space before downloading (avoids disk overflow).
+            if not add_only:
+                log(f"Deleting old library file to free space before download: {movie_path}")
+                movie_path.unlink(missing_ok=True)
+                log(f"Freed {size_gb:.1f} GB.")
+
+            # Add to qBittorrent (category "radarr" so Radarr will import to movies when done)
             if QBIT_SAVE_PATH_REPLACEMENT.strip():
                 save_path_for_add = QBIT_SAVE_PATH_REPLACEMENT.strip()
             elif CATEGORY == "radarr":
@@ -436,15 +443,13 @@ def main() -> int:
                     continue
                 break
 
-            # 4. Wait for completion
+            # Wait for completion
             log("Waiting for download to complete (polling)...")
             if not wait_for_completion(client, info_hash):
                 log("Timeout waiting for completion. Exiting; you can move the file manually when done.")
                 break
 
             if CATEGORY == "radarr":
-                log(f"Deleting old library file to free space: {movie_path}")
-                movie_path.unlink(missing_ok=True)
                 log("Done. Radarr will import the new file to /mnt/media-storage/movies.")
                 break
 

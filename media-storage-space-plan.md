@@ -39,7 +39,7 @@
 - **.dedupe-backup:** **~858 MB**. Only remove after you’re sure dedupe results are correct and you don’t need to roll back.
 
 ### 4. **Replace large movie with smaller release (Apibay + qBittorrent)**
-- **Script:** `replace-movie-with-smaller.sh` (or `replace-movie-with-smaller.py`) picks the largest movie in the library, searches The Pirate Bay (Apibay), adds a much smaller release to qBittorrent, waits for completion, then replaces the file in the library and deletes the old one.
+- **Script:** `replace-movie-with-smaller.sh` (or `replace-movie-with-smaller.py`) picks the largest movie in the library, searches The Pirate Bay (Apibay), **deletes the old library file first** to free space, then adds the smaller release to qBittorrent and waits for completion (Radarr imports when done). Deleting first avoids disk overflow when free space is low.
 - **Usage:** `./replace-movie-with-smaller.sh` (full run); `--dry-run` to preview; `--add-only` to add the torrent and exit without waiting/replacing. If qBittorrent runs in Docker: `export QBIT_SAVE_PATH_REPLACEMENT=/downloads/replacement-movies`.
 - **Env:** `MIN_SIZE_GB`, `MAX_SIZE_RATIO`, `MIN_SEEDERS`, `QBIT_HOST`, etc. See script docstring.
 

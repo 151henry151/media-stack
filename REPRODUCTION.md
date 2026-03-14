@@ -108,26 +108,12 @@ Chat UI for requesting movies/TV via Apibay + qBittorrent.
   sudo systemctl enable --now media-requests
   ```
 
-- Nginx proxies `requests.romptele.com` to `http://127.0.0.1:8002`.
+- Nginx proxies `requests.romptele.com` to `http://127.0.0.1:8002`. The same app handles **movies**, **TV**, and **music**: set `MUSIC_REQUESTS_BACKEND_URL`, `MUSIC_REQUESTS_AIRSONIC_USER`, and `MUSIC_REQUESTS_AIRSONIC_PASS` in media-requests `.env` to enable music (calls the music-requests backend on port 8001).
+- **music-requests.romptele.com** proxies to the original music-requests app at `http://127.0.0.1:8001` (Docker service): full UI with artist/album search, TPB, YouTube rip, playlist/archive import. Requests.romptele.com remains the unified chatbot for movie/TV/music.
 
-### 5.2 Music-requests-chat app (music-requests.romptele.com)
+### 5.2 Music-requests-chat (optional / deprecated)
 
-Chat UI for the music-requests backend: request albums in plain language, paste YouTube/archive.org URLs to rip. Uses the same backend as the original music-requests app (Docker service on port 8001).
-
-- **Location**: `media-stack/music-requests-chat/`
-- **Run**: Use the systemd unit; install and start:
-
-  ```bash
-  cd media-stack/music-requests-chat
-  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-  cp .env.example .env
-  # .env: MUSIC_REQUESTS_BACKEND_URL=http://127.0.0.1:8001 (where music-requests container is exposed)
-  sudo cp music-requests-chat.service /etc/systemd/system/
-  sudo systemctl daemon-reload
-  sudo systemctl enable --now music-requests-chat
-  ```
-
-- Nginx proxies `music-requests.romptele.com` to `http://127.0.0.1:8003`. The **music-requests** Docker service must be running (e.g. port 8001) as the backend API.
+The standalone chat app in `media-stack/music-requests-chat/` is optional: music chat is integrated into media-requests at requests.romptele.com. You can disable music-requests-chat (port 8003) if you only use the original music-requests UI at music-requests.romptele.com and the chatbot at requests.romptele.com.
 
 ### 5.3 Cron Jobs
 
@@ -136,7 +122,7 @@ Install cron files under `/etc/cron.d/` (or equivalent) so the following run as 
 | File | Purpose |
 |------|--------|
 | `compress-media-nightly-cron` | Nightly compression of large movies/TV (uses `compress-media-nightly.sh`) |
-| `replace-movie-with-smaller-cron` | Replace large movies with smaller Apibay releases (uses `replace-movie-with-smaller.sh`) |
+| `replace-movie-with-smaller-cron` | Replace large movies with smaller Apibay releases (uses `replace-movie-with-smaller.sh`). Script deletes the old file first, then downloads the replacement to avoid disk overflow. |
 | `qbit-remove-errored-cron` | Remove errored/missing-file torrents from qBittorrent (uses `qbit-remove-errored-torrents.sh`) |
 | `airsonic-watchdog-cron` | Airsonic watchdog (uses `airsonic-watchdog.sh`) |
 | `lidarr/lidarr-import-cron` | Lidarr torrent import (uses `lidarr-torrent-import.sh`) |
